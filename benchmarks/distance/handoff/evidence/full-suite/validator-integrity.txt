@@ -1,0 +1,1 @@
+ok: trusted validation stack matches the pin (27 files)

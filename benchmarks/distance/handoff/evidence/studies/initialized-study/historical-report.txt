@@ -1,0 +1,149 @@
+# Initialization, refinement, compute budget and structural proposals
+
+The largest improvement was construction-specific: a matrix-only cyclic-shift
+pass recovered **weight 28 on board700 in 44.6 ms**, including preparation and
+witness delivery. Guided search still returned **70--71 after 60 seconds**.
+All of the structural pass's returned witnesses were independently validated
+and saved. This is one timing observation and a witnessed upper bound, not an
+exact-distance proof or a generally applicable speedup.
+
+Adding selective local refinement to initialized guided search produced **no
+better final code-level weight in 27 matched runs**: all 21 screen comparisons
+and all six longer-budget comparisons tied. Keep guided as a general candidate;
+this particular hybrid does not warrant becoming the default.
+
+## What changed and what was measured
+
+`../../initialized_search.py` composes the existing native engines with common
+initialization and a small refinement pool. It scans logical representatives,
+then all representative combinations for k <= 16 or all pairs for larger k.
+The pool retains eight low-weight logical classes. The hybrid refines an untried
+support in a 5 ms slice when it has earned enough of its 10% refinement budget.
+Native trial loops and the guided population policy are unchanged.
+
+Preparation, initialization, session creation, search and witness delivery are
+inside the budget. Matrix loading, Python imports and independent verification
+are outside it. Each code receives an equal X/Z split; reference supports and
+target weights never enter the search. Every exported support, including
+non-global and late improvements, is retained and saved through the kit.
+
+- [10-second screen](screen-10s/REPORT.md): seven cases, three methods, three
+  fresh seeds (800--802), 63 configurations.
+- [60-second diagnostic](hard-60s/REPORT.md): three hard cases, guided and hybrid,
+  two fresh seeds (810--811), 12 configurations. Prefixes record progress without
+  restarting the run or changing its settings.
+- [Cyclic-shift diagnostic](orbit-completion/REPORT.md): three hard cases in their
+  original layouts and under a fixed random qubit relabeling.
+- [Polynomial-division diagnostic](polynomial-completion/REPORT.md): the same six
+  inputs, with a finite set of common-factor proposals.
+
+One worker, CPU0, serial timed runs and shuffled method order per case/seed.
+Validation and saving finished before the next timed search. Small development
+and read-only analysis jobs were pinned to CPU7 during the timed studies; no
+competing timed search ran. The native policies and main schedule were frozen
+in `../../strategy_prototypes/INITIALIZED_PLAN.md` before evaluation. The two
+structural diagnostics were exploratory additions, not part of the frozen grid.
+
+## Does more compute close the gap?
+
+These are medians from the **same two guided trajectories**, each observed at
+10 and 60 seconds/code. Lower is better; fractional medians are not witnesses.
+
+| Case | Reference target | At 10 seconds | At 60 seconds |
+|---|---:|---:|---:|
+| Board700 | 28 | 74.5 | 70.5 |
+| Board682 | 72 | 83.5 | 79.5 |
+| Regression690 | 28 | 81.5 | 80.5 |
+
+More time bought modest progress, not recovery of any of these targets. Two
+seeds and a 60-second ceiling cannot establish asymptotic plateaus or reliable
+miss probabilities. However, these measurements give no reason to expect a
+small further throughput improvement to close the largest gaps by itself.
+
+In the broader 10-second screen, guided's medians were 73, 82, 83, 29, 24, 20,
+and 60 for board700, board682, regression690, Tanner432, Mitten975, toric1000
+and bicycle960 respectively. It beat incremental in seven matched runs, tied
+ten and lost four. Tanner was the clearest gain: median 29 versus 32.
+
+## What structure helped?
+
+The cyclic pass proposes simultaneous shifts of supplied check rows inside two
+equal coordinate blocks. It checks every proposed row for zero syndrome and
+nontrivial logical parity on the actual matrices. It does not assume that the
+shift preserves the code, and receives no parent matrix or reference witness.
+
+On board700, the supplied rows cover only part of these cyclic orbits. Completing
+them exposes 116 X and 106 Z nontrivial rows, all of weight 28. The submitted
+construction is a check-deletion chain, consistent with these observations.
+The pass found no logical on the randomly relabeled control or on the two full
+circulant examples. Recovering hidden block coordinates is **not implemented**.
+
+The polynomial pass rotates the first check row and divides its two polynomials
+by gcd(a,b) or gcd(a,b,x^L+1), testing each proposal independently. It found only
+weights 234, 191 and 171 on the three original inputs and nothing on their
+relabeled controls. This bare proposal generator is not useful here. Searching
+linear combinations of reduced generators remains untested; the underlying
+reduction is described by [Wang and Pryadko](https://arxiv.org/html/2203.17216#S3.SS1).
+
+The existing single-block circulant search remains complementary: the preceding
+matched two-second study reached 48 on regression690 in every seed. It was not
+rerun or combined with the new strategies in this experiment.
+
+## Why the local improvements do not justify the hybrid
+
+There were no local improvements at all on the three hard cases in either new
+grid. Refinement helped intermediate Tanner bounds, but guided ultimately caught
+up. The cap avoided the large time waste in the earlier heavy-refinement study.
+
+On bicycle960, refinement improves the measured Z-side median from 136 to 122,
+but X initialization already gives 60, leaving the code-level bound unchanged.
+Moreover, an exact matrix check shows that reversing all qubit columns maps its
+X check-row set to its Z check-row set. Transferring the prepared X witness by
+this symmetry already dominates the Z search. See [sector results](screen-10s/SIDES.md)
+and [matrix symmetry checks](symmetry-check.json). No transformed witness was
+generated in this diagnostic; the timed implementation does not use the symmetry.
+The same exact row-set equality holds for board682, regression690 and toric1000.
+
+This hybrid uses initialization and global native improvements as its seed pool.
+It does not inspect every elite basis, inject refined witnesses into the native
+population, or use the previous experiment's frequent independent RIS sessions.
+Its negative result does not rule out all combinations of evolution and local
+search. Some preparation is duplicated and the policy wrapper uses Python;
+this is an experimental composition, not a fused C++ implementation.
+
+## Recommended next work
+
+1. Make prepared witnesses, verified sector symmetries and applicable structural
+   passes part of one initialization path. Preserve a plain guided fallback.
+2. For the remaining hard full-bicycle cases, test search in reduced algebraic
+   subspaces with both blocks, rather than just scoring their generators.
+3. Compare an independent syndrome-decoder search or higher-order information-set
+   search using bounded matching lists. Those change candidate generation rather
+   than only the speed of the current basis walk. See
+   [theory and implementation directions](../../strategy_prototypes/NEXT_STRATEGIES.md).
+4. Evaluate any resulting portfolio under one total budget on more existing
+   inputs and relabelings before drawing broad conclusions. Larger n is still
+   required to assess L3/main-memory scaling.
+
+## Validation and reproduction
+
+35 relevant tests passed, including logical classes, syndrome preservation,
+word boundaries, refinement budgeting, deadline handling and evidence retention.
+Ruff and whitespace checks passed; the trusted validator's 27 files still match
+their pin. The artifact audit checks complete grids, saved support identity,
+source/binary hashes, matrices and relabelings. **5,360 witness documents** were
+saved across the 75 timed configurations and 12 finite diagnostic configurations.
+Neither timed grid returned a late event. Individual audits accompany each run.
+
+All work remains local and uncommitted. No verifier, leaderboard entry, CI or
+publication workflow was changed. These are witness searches, not full candidate
+gate passes or exact-distance certificates.
+
+```sh
+.venv-benchmark/bin/python benchmarks/distance/study_initialized.py --output <new-screen-directory>
+.venv-benchmark/bin/python benchmarks/distance/study_initialized.py \
+  --output <new-long-directory> --cases board-700-222-28 board-682-172-79 regression-690-182 \
+  --methods guided guided-refine --seconds 60 --seeds 2 --seed-start 810
+.venv-benchmark/bin/python benchmarks/distance/study_orbit_completion.py <new-orbit-directory>
+.venv-benchmark/bin/python benchmarks/distance/study_polynomial_completion.py <new-polynomial-directory>
+```

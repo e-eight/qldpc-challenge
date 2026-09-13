@@ -1,0 +1,58 @@
+{
+  "cells": [
+    {
+      "case": "682-182-76",
+      "method": "guided",
+      "weights": [
+        80,
+        81,
+        83
+      ]
+    },
+    {
+      "case": "682-182-76",
+      "method": "crt-groups",
+      "weights": [
+        99,
+        99,
+        99
+      ]
+    },
+    {
+      "case": "682-182-76",
+      "method": "binary-groups",
+      "weights": [
+        94,
+        97,
+        95
+      ]
+    },
+    {
+      "case": "664-170-18",
+      "method": "guided",
+      "weights": [
+        18,
+        18,
+        18
+      ]
+    },
+    {
+      "case": "664-170-18",
+      "method": "crt-groups",
+      "weights": [
+        82,
+        88,
+        86
+      ]
+    },
+    {
+      "case": "664-170-18",
+      "method": "binary-groups",
+      "weights": [
+        84,
+        84,
+        82
+      ]
+    }
+  ]
+}

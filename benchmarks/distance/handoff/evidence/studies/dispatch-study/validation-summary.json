@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "configurations": 212,
+  "saved_witness_documents_checked": 13519,
+  "grids": {
+    "screen-2s": {
+      "configurations": 156,
+      "saved_witness_documents_checked": 8925,
+      "measured_sources_checked": 116,
+      "binaries_checked": 14,
+      "audit": "screen-2s/audit-dispatch.json",
+      "audit_sha256": "24807d53c20a33817f75c2c4d46b3166513c6a4d402643aa4f5d73bc6daae628"
+    },
+    "original-10s": {
+      "configurations": 56,
+      "saved_witness_documents_checked": 4594,
+      "measured_sources_checked": 116,
+      "binaries_checked": 14,
+      "audit": "original-10s/audit-dispatch.json",
+      "audit_sha256": "804efb8168e34ed6d0731591d7d99c3b4ba6895ceea670cd95c63e6b664336d9"
+    }
+  },
+  "tests": {
+    "passed": 29,
+    "new": 15,
+    "existing": 14,
+    "log": "tests.txt",
+    "sha256": "86e5fc45e6c5f4d109549eadd48271a67d77c63384dea9af8da50a17b8e8aef3"
+  },
+  "lint": {
+    "status": "passed",
+    "log": "lint.txt",
+    "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+  },
+  "validator_integrity": {
+    "status": "passed",
+    "log": "validator-integrity.txt",
+    "sha256": "181345a80fc13d3d755d8ee8eadcaafd8592947f9998e769a99273e34b84fb0a"
+  },
+  "live_source_and_binary_hashes_match": true,
+  "identical_initialization_across_budgets": true,
+  "test_dependency_archive_matches": true,
+  "scope": "Experimental witnessed upper bounds; not exact-distance certificates or full candidate-gate passes."
+}

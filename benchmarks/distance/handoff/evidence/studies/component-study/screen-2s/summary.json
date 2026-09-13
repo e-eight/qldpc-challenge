@@ -1,0 +1,184 @@
+{
+  "cells": [
+    {
+      "case": "684-12-73",
+      "method": "guided",
+      "target": 51,
+      "weights": [
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "case": "684-12-73",
+      "method": "auto-components",
+      "target": 51,
+      "weights": [
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "case": "684-12-73",
+      "method": "metadata-components",
+      "target": 51,
+      "weights": [
+        51,
+        51,
+        51
+      ]
+    },
+    {
+      "case": "684-8-85",
+      "method": "guided",
+      "target": 54,
+      "weights": [
+        63,
+        63,
+        63
+      ]
+    },
+    {
+      "case": "684-8-85",
+      "method": "auto-components",
+      "target": 54,
+      "weights": [
+        63,
+        63,
+        63
+      ]
+    },
+    {
+      "case": "684-8-85",
+      "method": "metadata-components",
+      "target": 54,
+      "weights": [
+        54,
+        54,
+        54
+      ]
+    },
+    {
+      "case": "682-182-76",
+      "method": "guided",
+      "target": 76,
+      "weights": [
+        82,
+        83,
+        80
+      ]
+    },
+    {
+      "case": "682-182-76",
+      "method": "auto-components",
+      "target": 76,
+      "weights": [
+        82,
+        83,
+        80
+      ]
+    },
+    {
+      "case": "682-182-76",
+      "method": "metadata-components",
+      "target": 76,
+      "weights": [
+        82,
+        83,
+        80
+      ]
+    },
+    {
+      "case": "700-140-22",
+      "method": "guided",
+      "target": 22,
+      "weights": [
+        22,
+        22,
+        22
+      ]
+    },
+    {
+      "case": "700-140-22",
+      "method": "auto-components",
+      "target": 22,
+      "weights": [
+        22,
+        22,
+        22
+      ]
+    },
+    {
+      "case": "700-140-22",
+      "method": "metadata-components",
+      "target": 22,
+      "weights": [
+        22,
+        22,
+        22
+      ]
+    },
+    {
+      "case": "664-170-18",
+      "method": "guided",
+      "target": 18,
+      "weights": [
+        18,
+        18,
+        18
+      ]
+    },
+    {
+      "case": "664-170-18",
+      "method": "auto-components",
+      "target": 18,
+      "weights": [
+        18,
+        18,
+        18
+      ]
+    },
+    {
+      "case": "664-170-18",
+      "method": "metadata-components",
+      "target": 18,
+      "weights": [
+        18,
+        18,
+        18
+      ]
+    },
+    {
+      "case": "676-4-13",
+      "method": "guided",
+      "target": 13,
+      "weights": [
+        13,
+        13,
+        13
+      ]
+    },
+    {
+      "case": "676-4-13",
+      "method": "auto-components",
+      "target": 13,
+      "weights": [
+        13,
+        13,
+        13
+      ]
+    },
+    {
+      "case": "676-4-13",
+      "method": "metadata-components",
+      "target": 13,
+      "weights": [
+        13,
+        13,
+        13
+      ]
+    }
+  ]
+}

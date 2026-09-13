@@ -1,0 +1,63 @@
+# Algebraic structure diagnostic
+
+The stronger algebraic tests confirm useful structure, but expose no new small physical search space for the difficult inputs. The whole check kernels of the five non-surface inputs are coordinate-indecomposable. Small coupling ranks appear only in the already easy surface example. Cyclic polynomial representations are verified for the bicycle and lifted-product inputs, but their algebraic factors do not have disjoint physical support. No distance search was run and no bound changed.
+
+## Exact coordinate decomposition
+
+For RREF checks R=[I|A], the coordinate-mask equations H diag(m) G^T=0 reduce to A_ij(m_pivot_i+m_free_j)=0. Thus mask bits must agree along each pivot/free incidence edge. Connected groups give the finest coordinate decomposition of ker(H); isolated pivot-only coordinates are forced zero and contribute no kernel dimension. This implements the diagonal-mask/stabilizing-algebra characterization using ordinary binary elimination. [Mathematical background](https://perso.telecom-paristech.fr/randriam/maths/HR_AGCT-14.pdf).
+
+We analyzed both sectors of all six frozen inputs, on the full coordinates and every documented block proposal: 60 distinct domains. An independent audit formed the mask equations from the original checks and kernel bases, checked every proposed mask, and compared the full mask-space dimension with the number of groups. It also verified logical image dimensions by adjoining lifted restricted kernel bases to the stabilizer row space.
+
+| Input | Full-kernel coordinate components, each sector |
+|---|---|
+| 684-12-73 | 684 coordinates / kernel dimension 348 / logical rank 12 |
+| 684-8-85 | 684 coordinates / kernel dimension 346 / logical rank 8 |
+| 682-182-76 | 682 coordinates / kernel dimension 432 / logical rank 182 |
+| 700-140-22 | 700 coordinates / kernel dimension 420 / logical rank 140 |
+| 664-170-18 | 664 coordinates / kernel dimension 417 / logical rank 170 |
+| 676-4-13 | 169 coordinates / kernel dimension 85 / logical rank 1, 169 coordinates / kernel dimension 85 / logical rank 1, 169 coordinates / kernel dimension 85 / logical rank 1, 169 coordinates / kernel dimension 85 / logical rank 1 |
+
+The only additional groups hidden by the supplied sparse rows occurred in six balanced-product restrictions: each split into 14 forced-zero singleton coordinates plus one active 266-coordinate component. The active dimensions remained 7 or 19. There were **no new splits into multiple active components** beyond the previous graph-based decomposition. The native search already removes coordinates identically zero in its kernel basis, so this discovery does not add a new optimization there.
+
+All 60 decompositions were reproduced after random invertible row mixing and the previously frozen joint row/column permutations. These tests concern coordinate decomposition, not inference of the original construction blocks. A coordinate-indecomposable full kernel can still contain useful small single-block subspaces; the affine results illustrate that distinction.
+
+## Rank-based separators
+
+For a coordinate partition S,T, coupling is lambda=rank(H_S)+rank(H_T)-rank(H). It counts the dimension of the intersection of the two syndrome spaces. Small coupling is relevant to trellis or separator-based algorithms, but local solving costs and logical information must also be accounted for. [Binary-code decomposition theory](https://ece.iisc.ac.in/~nkashyap/Papers/code_decomp_final.pdf).
+
+We evaluated every prefix of eight fixed orders: natural, reverse, three RREF-incidence breadth-first traversals and three seeded random orders. A balanced cut leaves at least one quarter of the domain on each side. We also evaluated documented subsets and repeated the sweep inside every active full-kernel exact component of size at least 32. The ranks are basis invariant; these candidate-order heuristics are not an optimal or permutation-invariant separator algorithm.
+
+| Input | Best tested balanced coupling X/Z, whole domain | Best tested maximum sweep coupling X/Z |
+|---|---:|---:|
+| 684-12-73 | 170 / 170 | 302 / 304 |
+| 684-8-85 | 170 / 170 | 308 / 308 |
+| 682-182-76 | 170 / 170 | 249 / 249 |
+| 700-140-22 | 136 / 136 | 264 / 238 |
+| 664-170-18 | 165 / 165 | 245 / 246 |
+| 676-4-13 | 0 / 0 | 7 / 8 |
+
+The hard inputs have best tested balanced coupling ranks 136–170, still far too large for direct enumeration of all boundary syndromes. These values describe the cuts tried; they are **not lower bounds on every possible cut**. The original affine halves remain at 270/288 and the bicycle halves at 250, as previously measured.
+
+The surface input already decomposes into four 169-coordinate pieces. Within each piece, the best tested balanced coupling is 6 for X and 7 for Z; the best full sweep peaks are 7 and 8. That is a credible setting for a small-state trellis calculation, but guided already reaches its reference bound 13. It is a useful positive control for the diagnostic, not evidence of a breakthrough on the hard instances.
+
+## Verified cyclic and polynomial structure
+
+We tested all 67 simultaneous one-step shifts in equal consecutive coordinate blocks of lengths L>=3 dividing n. Only two preserve both CSS check row spaces. Accepted permutations also preserve row-mixed checks and the conjugated, relabeled inputs. This verifies proposed symmetries; it does not discover arbitrary hidden coordinate orderings or compute the full automorphism group.
+
+- **682-182-76:** simultaneous shifts in two blocks of length341. An exact standard bicycle representation reconstructed from one X check and the swapped reciprocal Z generator spans both original check row spaces. The common binary polynomial gcd has degree91, predicting k=182 and both half-kernel dimensions91. It factors into one degree-1, two degree-5 and eight degree-10 irreducibles. The full squarefree modulus has 38 irreducible factors. Bézout identities, factor products, irreducibility and matrix-rank predictions all check.
+
+- **664-170-18:** simultaneous shifts in eight blocks of length83. A supplemental analysis groups the supplied rows into three complete shift orbits per sector, yielding 3x8 polynomial matrices. The modulus factors into degrees1 and82. The matrices have rank1 in each sector over the degree-1 field and rank3 over the degree-82 field, reconstructing binary ranks247 and k=170. This verifies its compact module description, while retaining a large extension-field factor.
+
+The supplemental multi-block check followed the observed verified length-83 action; it is separately recorded in [qc_module.py](qc_module.py), [qc-modules.json](qc-modules.json), and two synthetic tests comparing field ranks with expanded binary multiplication matrices. It adds no witness search or parameter sweep.
+
+Polynomial factors describe algebraic subspaces that overlap on physical coordinates. Their sizes cannot be treated as independent small Hamming-weight searches: cancellation between factors can affect weight. For a complete bicycle algebraic description, see [Wang and Pryadko](https://arxiv.org/html/2203.17216#S3.SS1). The previous GCD/reduced-space experiments used only part of that structure; this diagnostic verifies applicability and factors, rather than implementing a new distance algorithm. Per-factor X/Z module ranks in the supplemental JSON are raw ranks; logical pairing requires the reciprocal convention, so their same-factor differences are not presented as individual quantum dimensions.
+
+## Recommendation
+
+Keep the affine specialization, and do not start another generic search campaign from these results. Exact independent-block discovery has now been checked more thoroughly. The tested low-rank cuts help only the easy local example. If further mathematical work is warranted, the concrete remaining lead is a weight-aware polynomial/module algorithm on the verified cyclic inputs; a factorization alone is not that algorithm. Larger kernels rejected by the preceding dimension-64 policy remain untested by that search, and this diagnostic does not turn the policy cutoff into a mathematical obstruction.
+
+## Evidence and reproduction
+
+The six-code core pass recorded 9.40 seconds on CPU7, including its final preservation check; this is diagnostic timing, not a distance-search benchmark. Nine core tests and two supplemental field-rank tests passed. The audit checked 1,213,788 nonzero mask equations, 1,466 distinct component spaces, 903 selected cut ranks and all 67 symmetry proposals. All 1,174 artifacts from the preceding three studies and their measured source/binary hashes remain unchanged. Trusted verifier integrity and core lint passed.
+
+Raw matrices, full cut profiles, decompositions, permutations, polynomial certificates and frozen core sources are in [analysis](analysis/completed.json). [audit.json](audit.json), [summary.json](summary.json), test logs, supplemental source hashes and SHA256SUMS accompany this report. No solver, verifier, leaderboard or previous result was modified. [Reproduction instructions](REPRODUCE.md).

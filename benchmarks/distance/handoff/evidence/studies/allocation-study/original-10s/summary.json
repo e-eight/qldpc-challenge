@@ -1,0 +1,965 @@
+{
+  "cells": [
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "weights": [
+        76,
+        76,
+        75
+      ],
+      "median": 76,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "dispatch",
+      "weights": [
+        28,
+        28,
+        28
+      ],
+      "median": 28,
+      "routed_only": [
+        28,
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "race",
+      "weights": [
+        28,
+        28,
+        28
+      ],
+      "median": 28,
+      "routed_only": [
+        28,
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "weights": [
+        83,
+        81,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "dispatch",
+      "weights": [
+        84,
+        81,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        84,
+        84,
+        83
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "race",
+      "weights": [
+        83,
+        81,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        84,
+        87,
+        85
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "weights": [
+        84,
+        82,
+        82
+      ],
+      "median": 82,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "dispatch",
+      "weights": [
+        48,
+        48,
+        48
+      ],
+      "median": 48,
+      "routed_only": [
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "race",
+      "weights": [
+        48,
+        48,
+        48
+      ],
+      "median": 48,
+      "routed_only": [
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "guided",
+      "weights": [
+        29,
+        29,
+        29
+      ],
+      "median": 29,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "dispatch",
+      "weights": [
+        29,
+        29,
+        29
+      ],
+      "median": 29,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "race",
+      "weights": [
+        29,
+        29,
+        29
+      ],
+      "median": 29,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "guided",
+      "weights": [
+        24,
+        24,
+        24
+      ],
+      "median": 24,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "dispatch",
+      "weights": [
+        24,
+        24,
+        24
+      ],
+      "median": 24,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "race",
+      "weights": [
+        24,
+        24,
+        24
+      ],
+      "median": 24,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "toric-1000",
+      "method": "guided",
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "toric-1000",
+      "method": "dispatch",
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "toric-1000",
+      "method": "race",
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "guided",
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "dispatch",
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "race",
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "paired": [
+    {
+      "control": "guided",
+      "lower": 6,
+      "equal": 15,
+      "higher": 0
+    },
+    {
+      "control": "dispatch",
+      "lower": 1,
+      "equal": 20,
+      "higher": 0
+    }
+  ],
+  "allocation": [
+    {
+      "case": "board-700-222-28",
+      "seed": 1510,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 20
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.05238274729345,
+        "route": 3.9049549093469977
+      }
+    },
+    {
+      "case": "board-700-222-28",
+      "seed": 1510,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 20
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.0528466039104387,
+        "route": 3.9086538929259405
+      }
+    },
+    {
+      "case": "board-700-222-28",
+      "seed": 1511,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 20
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.0543010082328692,
+        "route": 3.91305262199603
+      }
+    },
+    {
+      "case": "board-700-222-28",
+      "seed": 1511,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 20
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.0527203681413084,
+        "route": 3.908795428695157
+      }
+    },
+    {
+      "case": "board-700-222-28",
+      "seed": 1512,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 20
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.0530263100517914,
+        "route": 3.914169109193608
+      }
+    },
+    {
+      "case": "board-700-222-28",
+      "seed": 1512,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 19
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.0509638810763136,
+        "route": 3.910240664961748
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1510,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 20,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 3.8878409537719563,
+        "route": 1.0888674431480467
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1510,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 20,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 3.8915349807357416,
+        "route": 1.0851471100468189
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1511,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 20,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 3.8926023908425122,
+        "route": 1.083987346268259
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1511,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 20,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 3.8936138129793108,
+        "route": 1.083098609931767
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1512,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 20,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 3.8980525630759075,
+        "route": 1.0775098548037931
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1512,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 20,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 3.8901781318709254,
+        "route": 1.0814683842472732
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1510,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 19
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.0076167328516021,
+        "route": 3.9668619165895507
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1510,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 19
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.0059170491294935,
+        "route": 3.9694923878414556
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1511,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 19
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.0051227997755632,
+        "route": 3.969214860815555
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1511,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 19
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.008146160049364,
+        "route": 3.967138710897416
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1512,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 19
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.0061284460825846,
+        "route": 3.9685960198985413
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1512,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 19
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 1.0023520255926996,
+        "route": 3.9723082549171522
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1510,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1510,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1511,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1511,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1512,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1512,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1510,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1510,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1511,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1511,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1512,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1512,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1510,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1510,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1511,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1511,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1512,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1512,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1510,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1510,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1511,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1511,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1512,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1512,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    }
+  ]
+}

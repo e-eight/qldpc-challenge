@@ -1,0 +1,22 @@
+{
+  "validated_configurations": 960,
+  "saved_candidates": 37131,
+  "paired_incremental_best_weights": {
+    "cpp": {
+      "lower": 181,
+      "equal": 49,
+      "higher": 10
+    },
+    "ris-block6": {
+      "lower": 166,
+      "equal": 54,
+      "higher": 20
+    },
+    "m4ri": {
+      "lower": 185,
+      "higher": 13,
+      "equal": 42
+    }
+  },
+  "note": "Descriptive counts across the fixed code/budget/worker grid; not independent Bernoulli trials."
+}

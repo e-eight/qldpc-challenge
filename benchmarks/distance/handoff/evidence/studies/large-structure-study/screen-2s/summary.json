@@ -1,0 +1,202 @@
+{
+  "cells": [
+    {
+      "case": "700-140-22",
+      "method": "guided",
+      "target": 22,
+      "weights": [
+        22,
+        22,
+        22
+      ],
+      "hits": 3,
+      "first_hit_seconds": [
+        0.08097090502269566,
+        0.02601611101999879,
+        0.07015399495139718
+      ],
+      "structured_only": [
+        null,
+        null,
+        null
+      ],
+      "median": 22
+    },
+    {
+      "case": "700-140-22",
+      "method": "race",
+      "target": 22,
+      "weights": [
+        22,
+        22,
+        22
+      ],
+      "hits": 3,
+      "first_hit_seconds": [
+        0.09966482094023377,
+        0.04479684692341834,
+        0.08674246491864324
+      ],
+      "structured_only": [
+        null,
+        null,
+        null
+      ],
+      "median": 22
+    },
+    {
+      "case": "700-140-22",
+      "method": "structure",
+      "target": 22,
+      "weights": [
+        22,
+        22,
+        22
+      ],
+      "hits": 3,
+      "first_hit_seconds": [
+        0.028454030980356038,
+        0.03035389503929764,
+        0.02335482998751104
+      ],
+      "structured_only": [
+        22,
+        22,
+        22
+      ],
+      "median": 22
+    },
+    {
+      "case": "700-6-32",
+      "method": "guided",
+      "target": 32,
+      "weights": [
+        32,
+        32,
+        32
+      ],
+      "hits": 3,
+      "first_hit_seconds": [
+        0.3215224500745535,
+        0.061279102927073836,
+        0.11141302692703903
+      ],
+      "structured_only": [
+        null,
+        null,
+        null
+      ],
+      "median": 32
+    },
+    {
+      "case": "700-6-32",
+      "method": "race",
+      "target": 32,
+      "weights": [
+        32,
+        32,
+        32
+      ],
+      "hits": 3,
+      "first_hit_seconds": [
+        0.5298583089606836,
+        0.06135604006703943,
+        0.25959761801641434
+      ],
+      "structured_only": [
+        null,
+        null,
+        null
+      ],
+      "median": 32
+    },
+    {
+      "case": "700-6-32",
+      "method": "structure",
+      "target": 32,
+      "weights": [
+        32,
+        32,
+        32
+      ],
+      "hits": 3,
+      "first_hit_seconds": [
+        0.039477251935750246,
+        0.0380688029108569,
+        0.04105164995416999
+      ],
+      "structured_only": [
+        32,
+        32,
+        32
+      ],
+      "median": 32
+    },
+    {
+      "case": "684-10-101",
+      "method": "guided",
+      "target": 101,
+      "weights": [
+        112,
+        111,
+        114
+      ],
+      "hits": 0,
+      "first_hit_seconds": [
+        null,
+        null,
+        null
+      ],
+      "structured_only": [
+        null,
+        null,
+        null
+      ],
+      "median": 112
+    },
+    {
+      "case": "684-10-101",
+      "method": "race",
+      "target": 101,
+      "weights": [
+        112,
+        111,
+        114
+      ],
+      "hits": 0,
+      "first_hit_seconds": [
+        null,
+        null,
+        null
+      ],
+      "structured_only": [
+        null,
+        null,
+        null
+      ],
+      "median": 112
+    },
+    {
+      "case": "684-10-101",
+      "method": "structure",
+      "target": 101,
+      "weights": [
+        90,
+        90,
+        90
+      ],
+      "hits": 3,
+      "first_hit_seconds": [
+        0.030141317984089255,
+        0.024841784965246916,
+        0.021471939980983734
+      ],
+      "structured_only": [
+        90,
+        90,
+        90
+      ],
+      "median": 90
+    }
+  ]
+}

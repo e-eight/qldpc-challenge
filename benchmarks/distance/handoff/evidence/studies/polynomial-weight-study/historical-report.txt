@@ -1,0 +1,40 @@
+# Polynomial factors with physical-weight optimization
+
+Decision: stop this candidate. The tested CRT coordinate-update heuristic does not beat guided search on either input at either budget. Its complete kernel coverage does not translate into useful low-weight search geometry. This is a negative result for this heuristic, not a theorem ruling out polynomial algorithms.
+
+## Measured comparison
+
+Lower is better. Entries are witnessed upper bounds, minimum of X and Z, for seeds 2000/2001/2002. The reported input targets are 76 and 18. Each total code budget is split equally between sectors.
+
+| Seconds/code | Code | Guided | CRT groups | Binary groups |
+|---:|---|---|---|---|
+| 2 | 682-182-76 | [80, 81, 83] | [99, 99, 99] | [94, 97, 95] |
+| 2 | 664-170-18 | [18, 18, 18] | [82, 88, 86] | [84, 84, 82] |
+| 10 | 682-182-76 | [80, 81, 80] | [99, 99, 99] | [94, 95, 95] |
+| 10 | 664-170-18 | [18, 18, 18] | [82, 82, 86] | [80, 80, 80] |
+
+## Attribution and scope
+
+Common initialization is identical across all methods, seeds and both budgets. It gives X/Z 99/99 for 682 and 92/100 for 664. CRT's improvement must be judged against these, not credited with another method's witnesses. The two group optimizers have no guided fallback. Reference supports never enter any search.
+
+The CRT lift spans the complete opposite-check kernel: 432 dimensions in 49 groups for 682; 417 in 52 groups for 664. Each generated row and the full rank are checked against the binary matrix in every timed run. Logical tags use three 64-bit words per vector, retaining all 182/170 bits.
+
+For each field-nullspace generator we enumerate all coefficient changes when its factor degree is at most 10. Degree-82 generators on 664 are split into consecutive groups of at most 10 coefficients: those are exact group updates, not exhaustive optimization of the whole factor. Even on 682, a factor with two field generators is updated one generator at a time. All updates are scored after lifting into physical qubit coordinates. Weight is never assumed to add across factors. See the polynomial and circulant conventions in [Wang and Pryadko, sections II.1 and III.1](https://arxiv.org/html/2203.17216). The local-search policy is our experimental heuristic.
+
+The binary ablation uses the same group sizes, optimizer and seeds, replacing the CRT basis with shuffled ordinary kernel rows. It deliberately pays the same algebraic setup to isolate grouping; it is not a claim of the fastest possible binary implementation. Unlike the previous partial polynomial-span RIS/beam experiment, this search covers the full kernel and uses exhaustive physical-weight group updates.
+
+## Cost and implementation
+
+36 configurations; 216 allocated search seconds; one CPU, serial shuffled measurements. Preparation, initialization, factor verification, CRT lifting, binary checks, packed table construction and export count against each budget. Lift discovery and factorization are reused from the prior algebra diagnostic and excluded. There are no setup caches across search runs. These supplied structural facts give the new method a favorable starting point, so their excluded discovery cost cannot explain its loss.
+
+Median total preparation through table setup: 0.150s/sector (range 0.122–0.205s). Median packed update evaluation rate: 159.2 million/second. Candidate scores are not equivalent to guided basis trials and should not be compared as equal units of search work.
+
+C++ stores physical words and logical tags contiguously and precomputes all group XORs. The hot scoring loop uses XOR and hardware popcount, without per-candidate allocation. The largest single table is 112 KiB; all tables together occupy 4.29/4.38 MiB per sector. On this machine (32 KiB L1 data, 1 MiB L2, 32 MiB shared L3), a group fits L2 and the full table collection fits L3. The current state is only 112 bytes. The search is already fast at evaluating its chosen moves; the quality gap points to unhelpful moves/local minima as the main limitation in this experiment.
+
+## Validation and retained evidence
+
+10 synthetic unit tests passed. All 1464 witness documents (one per distinct support per run/sector) were saved through the research kit; the separate audit rechecked 1614 raw events using trusted binary syndrome and rowspace algebra. Source and binary snapshots, matrix hashes, common initialization, event timestamps, deadline summaries and native counters were audited. Late events are retained but excluded from budget credit. The 27-file trusted validator integrity check passed. These are existing-code distance benchmarks, not new-code acceptance or full-distance certificates.
+
+See [reproduction commands](REPRODUCE.md), [2-second audit](main2/audit-polynomial.json), [10-second audit](main10/audit-polynomial.json), and [machine-readable summary](summary.json). Each run folder retains both raw sector event logs and result records; these carry every exported support independently of the kit staging documents.
+
+Recommendation: keep the full-kernel algebra utilities and this negative control, but do not spend more time tuning this optimizer without a new reason to expect much better physical-weight moves. No benchmark setting was tuned after seeing results.

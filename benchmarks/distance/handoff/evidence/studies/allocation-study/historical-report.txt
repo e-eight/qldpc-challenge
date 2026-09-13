@@ -1,0 +1,82 @@
+# Competing guided and structured search
+
+Implemented two resumable search sessions with conservative time allocation. The existing detector and C++ search engines are unchanged; the new Python scheduler compares their witnessed weights and allocates time between them.
+
+The new policy retains the strong Board700/Regression690 structural results and matches guided on Board682 in this grid. Individual seeds still favor the previous dispatcher. This supports the conservative allocation policy, with the limitations below.
+
+## Matched results
+
+All entries are medians of three fresh seeds, in witnessed upper-bound weight; lower is better. Two-second and ten-second grids use different seeds and are independent runs. Each code budget splits equally between X and Z. Every configuration runs serially on CPU0 with one search thread. Preparation, common initialization, detection, setup, search, and witness delivery are included; imports, loading and independent validation/persistence are excluded.
+
+### Two seconds/code, including relabeling controls
+
+| Code/layout | Guided | Previous dispatcher | Competing sessions |
+|---|---:|---:|---:|
+| board-700-222-28 | 77 | 28 | 28 |
+| board-700-222-28-columns | 76 | 28 | 28 |
+| board-700-222-28-columns-rows | 76 | 76 | 76 |
+| board-682-172-79 | 84 | 85 | 84 |
+| board-682-172-79-columns | 83 | 85 | 83 |
+| board-682-172-79-columns-rows | 83 | 83 | 83 |
+| regression-690-182 | 84 | 48 | 48 |
+| regression-690-182-columns | 83 | 48 | 48 |
+| regression-690-182-columns-rows | 83 | 83 | 83 |
+| tanner-432_8_33 | 30 | 30 | 30 |
+| mitten-975-195 | 26 | 26 | 26 |
+| toric-1000 | 20 | 20 | 20 |
+| fresh-bb-960 | 60 | 60 | 60 |
+
+[screen-2s report](screen-2s/REPORT.md) and [per-seed results](screen-2s/summary.json).
+
+### Ten seconds/code, original corpus
+
+| Code/layout | Guided | Previous dispatcher | Competing sessions |
+|---|---:|---:|---:|
+| board-700-222-28 | 76 | 28 | 28 |
+| board-682-172-79 | 83 | 83 | 83 |
+| regression-690-182 | 82 | 48 | 48 |
+| tanner-432_8_33 | 29 | 29 | 29 |
+| mitten-975-195 | 24 | 24 | 24 |
+| toric-1000 | 20 | 20 | 20 |
+| fresh-bb-960 | 60 | 60 | 60 |
+
+[original-10s report](original-10s/REPORT.md) and [per-seed results](original-10s/summary.json).
+
+### Paired outcomes across both budgets
+
+| Control | New policy lower | Equal | Higher |
+|---|---:|---:|---:|
+| guided | 18 | 42 | 0 |
+| dispatch | 4 | 53 | 3 |
+
+33/33 matched outcomes with rejected partitions tie guided. All higher-weight outcomes are listed explicitly in [decision-summary.json](decision-summary.json). These paired layouts/seeds are not independent code families or a statistical guarantee.
+
+The previous study used different seeds: its Board682 median gap cannot be directly compared with this grid as a causal before/after result. At ten seconds here, both dispatchers and guided have median 83; the new policy matches guided in each seed and avoids one worse old-dispatcher outcome. At two seconds it improves Board682 medians over the old dispatcher on original and column-shuffled layouts.
+
+## Allocation and interpretation
+
+Each accepted partition gets guided and routed pilots, each min(100 ms, 10% of remaining time), including setup. The route receives the larger share only when it improves common initialization and is at least 10% lighter than guided’s effective best. Otherwise guided receives the larger share. Every epoch of at most 250 ms gives the unfavored engine 20% first, then the favored engine the remainder. Both sessions retain RNG/population/prepared-kernel state and batch counters across slices.
+
+| Original code, ten-second grid | Median guided seconds/sector | Median route s/sector | Switches |
+|---|---:|---:|---:|
+| board-700-222-28 | 1.053 | 3.910 | 0 |
+| board-682-172-79 | 3.892 | 1.084 | 0 |
+| regression-690-182 | 1.006 | 3.969 | 0 |
+
+There are 0 preference switches after the pilots across the full study. Repeated reassessment is implemented and tested synthetically, but these runs do not establish an advantage from switching during search. The demonstrated gain is choosing a more appropriate allocation from the pilot results. An initial-decision-only ablation would be needed to isolate the value of later reassessment.
+
+The 10% margin and 80/20 split are fixed hypotheses motivated by the prior allocation failure, not tuned on this run. The corpus and relabelings are reused known inputs. No target weights, code names, family metadata or reference supports enter search. Row shuffling still defeats structure recovery. No new best hard reference bound is found: the references remain 28, 72, and 28 for Board700, Board682, and Regression690.
+
+Maximum measured detection time is 9.533 ms; maximum detector budget overrun is 0.000 ms. Both search sessions remain resident during competition, increasing memory relative to sequential sessions. Total process RSS was not measured. Native setup and batches remain noninterruptible; slice splits and deadlines are cooperative targets.
+
+## Validation and reproduction
+
+Completed 180 configurations and audited 14,532 saved witness documents. All 46 unit/regression tests passed (17 new and 29 existing). Each returned corpus witness was retained through the existing validate_and_stage → make_submission/save_submission path. Complete-grid, common-initialization, source/binary/archive, actual matrix-transform, partition, decision, engine-export, and saved-document checks passed. Only the existing large-fixture size-cap exemption applies.
+
+The grids allocate 864 search seconds. Timed wall time was 868.10 seconds and CPU time 863.50 seconds. All 34 late exports were saved without deadline credit. Timings exclude independent validation and persistence.
+
+[Implementation and reproduction](IMPLEMENTATION.md), [frozen policy/grid](../../strategy_prototypes/ALLOCATION_PLAN.md), [search API](../../allocation_search.py), [tests](tests.txt), [lint](lint.txt), [hardware](hardware.json), [packages](environment-freeze.txt), [validation index](validation-summary.json), and [artifact checksums](SHA256SUMS.json).
+
+The source archives and binary hashes match across budgets, and common initialization is identical. The trusted verifier still matches its 27-file pin. No verifier, leaderboard, CI or publication changes. These are experimental witnessed upper bounds, not exact-distance certificates or full candidate-gate passes.
+
+Keep this as the leading allocation candidate for broader evaluation. The useful next comparison would test unseen code families/layouts and longer budgets; this study does not justify more tuning of the margin on the same small corpus.

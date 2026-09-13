@@ -1,0 +1,1118 @@
+{
+  "cells": [
+    {
+      "case": "board-700-222-28",
+      "method": "incremental",
+      "weights": [
+        76,
+        78,
+        75
+      ],
+      "median": 76,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "weights": [
+        77,
+        80,
+        75
+      ],
+      "median": 77,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "circulant",
+      "weights": [
+        77,
+        80,
+        75
+      ],
+      "median": 77,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "dispatch",
+      "weights": [
+        28,
+        28,
+        28
+      ],
+      "median": 28,
+      "routed_only": [
+        28,
+        28,
+        28
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "method": "incremental",
+      "weights": [
+        77,
+        76,
+        78
+      ],
+      "median": 77,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "method": "guided",
+      "weights": [
+        78,
+        73,
+        78
+      ],
+      "median": 78,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "method": "circulant",
+      "weights": [
+        78,
+        73,
+        78
+      ],
+      "median": 78,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "method": "dispatch",
+      "weights": [
+        28,
+        28,
+        28
+      ],
+      "median": 28,
+      "routed_only": [
+        28,
+        28,
+        28
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "method": "incremental",
+      "weights": [
+        77,
+        76,
+        78
+      ],
+      "median": 77,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "method": "guided",
+      "weights": [
+        78,
+        73,
+        78
+      ],
+      "median": 78,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "method": "circulant",
+      "weights": [
+        78,
+        73,
+        78
+      ],
+      "median": 78,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "method": "dispatch",
+      "weights": [
+        78,
+        73,
+        78
+      ],
+      "median": 78,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "incremental",
+      "weights": [
+        82,
+        82,
+        85
+      ],
+      "median": 82,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 72
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "weights": [
+        81,
+        84,
+        84
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 72
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "circulant",
+      "weights": [
+        79,
+        85,
+        85
+      ],
+      "median": 85,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 72
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "dispatch",
+      "weights": [
+        79,
+        84,
+        85
+      ],
+      "median": 84,
+      "routed_only": [
+        79,
+        85,
+        85
+      ],
+      "target": 72
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "method": "incremental",
+      "weights": [
+        84,
+        84,
+        87
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 72
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "method": "guided",
+      "weights": [
+        86,
+        84,
+        85
+      ],
+      "median": 85,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 72
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "method": "circulant",
+      "weights": [
+        86,
+        84,
+        85
+      ],
+      "median": 85,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 72
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "method": "dispatch",
+      "weights": [
+        79,
+        84,
+        85
+      ],
+      "median": 84,
+      "routed_only": [
+        79,
+        85,
+        85
+      ],
+      "target": 72
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "method": "incremental",
+      "weights": [
+        84,
+        84,
+        87
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 72
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "method": "guided",
+      "weights": [
+        86,
+        84,
+        85
+      ],
+      "median": 85,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 72
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "method": "circulant",
+      "weights": [
+        86,
+        84,
+        85
+      ],
+      "median": 85,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 72
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "method": "dispatch",
+      "weights": [
+        86,
+        84,
+        85
+      ],
+      "median": 85,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 72
+    },
+    {
+      "case": "regression-690-182",
+      "method": "incremental",
+      "weights": [
+        81,
+        86,
+        82
+      ],
+      "median": 82,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "weights": [
+        83,
+        86,
+        82
+      ],
+      "median": 83,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "regression-690-182",
+      "method": "circulant",
+      "weights": [
+        48,
+        48,
+        48
+      ],
+      "median": 48,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "regression-690-182",
+      "method": "dispatch",
+      "weights": [
+        48,
+        48,
+        48
+      ],
+      "median": 48,
+      "routed_only": [
+        48,
+        48,
+        48
+      ],
+      "target": 28
+    },
+    {
+      "case": "regression-690-182-columns",
+      "method": "incremental",
+      "weights": [
+        85,
+        84,
+        84
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "regression-690-182-columns",
+      "method": "guided",
+      "weights": [
+        84,
+        84,
+        84
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "regression-690-182-columns",
+      "method": "circulant",
+      "weights": [
+        84,
+        84,
+        84
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "regression-690-182-columns",
+      "method": "dispatch",
+      "weights": [
+        48,
+        48,
+        48
+      ],
+      "median": 48,
+      "routed_only": [
+        48,
+        48,
+        48
+      ],
+      "target": 28
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "method": "incremental",
+      "weights": [
+        85,
+        84,
+        84
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "method": "guided",
+      "weights": [
+        84,
+        84,
+        84
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "method": "circulant",
+      "weights": [
+        84,
+        84,
+        84
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "method": "dispatch",
+      "weights": [
+        84,
+        84,
+        84
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 28
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "incremental",
+      "weights": [
+        32,
+        34,
+        33
+      ],
+      "median": 33,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 32
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "guided",
+      "weights": [
+        30,
+        29,
+        29
+      ],
+      "median": 29,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 32
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "circulant",
+      "weights": [
+        30,
+        29,
+        29
+      ],
+      "median": 29,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 32
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "dispatch",
+      "weights": [
+        30,
+        29,
+        29
+      ],
+      "median": 29,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 32
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "incremental",
+      "weights": [
+        30,
+        38,
+        34
+      ],
+      "median": 34,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 24
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "guided",
+      "weights": [
+        26,
+        24,
+        26
+      ],
+      "median": 26,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 24
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "circulant",
+      "weights": [
+        26,
+        24,
+        26
+      ],
+      "median": 26,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 24
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "dispatch",
+      "weights": [
+        26,
+        24,
+        26
+      ],
+      "median": 26,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 24
+    },
+    {
+      "case": "toric-1000",
+      "method": "incremental",
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 20
+    },
+    {
+      "case": "toric-1000",
+      "method": "guided",
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 20
+    },
+    {
+      "case": "toric-1000",
+      "method": "circulant",
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 20
+    },
+    {
+      "case": "toric-1000",
+      "method": "dispatch",
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 20
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "incremental",
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 60
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "guided",
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 60
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "circulant",
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 60
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "dispatch",
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "routed_only": [
+        null,
+        null,
+        null
+      ],
+      "target": 60
+    }
+  ],
+  "paired": [
+    {
+      "control": "incremental",
+      "lower": 24,
+      "equal": 12,
+      "higher": 3
+    },
+    {
+      "control": "guided",
+      "lower": 14,
+      "equal": 24,
+      "higher": 1
+    },
+    {
+      "control": "circulant",
+      "lower": 11,
+      "equal": 28,
+      "higher": 0
+    }
+  ],
+  "timing": [
+    {
+      "case": "board-700-222-28",
+      "decisions": {
+        "continue_improving_route": 6
+      },
+      "median_detection_seconds": 0.004866911564022303,
+      "max_detection_seconds": 0.007894220994785428,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 1066565,
+      "median_route_seconds": 0.7690530400141142,
+      "median_guided_seconds": 0.1921130169648677,
+      "max_route_overrun_seconds": 0.003333543543703854,
+      "cpu_seconds": 5.9954983849999985,
+      "elapsed_seconds": 6.01556855509989,
+      "routed_only": [
+        28,
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "decisions": {
+        "continue_improving_route": 6
+      },
+      "median_detection_seconds": 0.004566049959976226,
+      "max_detection_seconds": 0.006953413947485387,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 1066565,
+      "median_route_seconds": 0.7718967185355723,
+      "median_guided_seconds": 0.19295596552547067,
+      "max_route_overrun_seconds": 0.0003047855570912361,
+      "cpu_seconds": 5.9973578450000105,
+      "elapsed_seconds": 6.0544227820355445,
+      "routed_only": [
+        28,
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "decisions": {
+        "no_partition": 6
+      },
+      "median_detection_seconds": 0.0015781655092723668,
+      "max_detection_seconds": 0.0022555539617314935,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 1049044,
+      "median_route_seconds": 0.0,
+      "median_guided_seconds": 0.9677305645309389,
+      "max_route_overrun_seconds": 0,
+      "cpu_seconds": 5.994238150000015,
+      "elapsed_seconds": 6.013335974887013,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "decisions": {
+        "continue_improving_route": 6
+      },
+      "median_detection_seconds": 0.0007784565095789731,
+      "max_detection_seconds": 0.0007974799955263734,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 1027096,
+      "median_route_seconds": 0.7823656689724885,
+      "median_guided_seconds": 0.19481221749447286,
+      "max_route_overrun_seconds": 0.0008424289990216494,
+      "cpu_seconds": 5.999187856000006,
+      "elapsed_seconds": 6.014551160042174,
+      "routed_only": [
+        79,
+        85,
+        85
+      ]
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "decisions": {
+        "continue_improving_route": 6
+      },
+      "median_detection_seconds": 0.0010996839846484363,
+      "max_detection_seconds": 0.0016200389945879579,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 1027096,
+      "median_route_seconds": 0.7804305059835315,
+      "median_guided_seconds": 0.19437013199785724,
+      "max_route_overrun_seconds": 0.0008997253607958555,
+      "cpu_seconds": 5.998843421000004,
+      "elapsed_seconds": 6.043609679793008,
+      "routed_only": [
+        79,
+        85,
+        85
+      ]
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "decisions": {
+        "no_partition": 6
+      },
+      "median_detection_seconds": 0.002061629027593881,
+      "max_detection_seconds": 0.0022219130769371986,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 1024368,
+      "median_route_seconds": 0.0,
+      "median_guided_seconds": 0.9739367829752155,
+      "max_route_overrun_seconds": 0,
+      "cpu_seconds": 5.996360949999968,
+      "elapsed_seconds": 6.051764871110208,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "decisions": {
+        "continue_improving_route": 6
+      },
+      "median_detection_seconds": 0.0009808235336095095,
+      "max_detection_seconds": 0.0012540329480543733,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 1050184,
+      "median_route_seconds": 0.7818194394931197,
+      "median_guided_seconds": 0.191956530965399,
+      "max_route_overrun_seconds": 0.013872951967641711,
+      "cpu_seconds": 5.992344458000019,
+      "elapsed_seconds": 6.014461222104728,
+      "routed_only": [
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "case": "regression-690-182-columns",
+      "decisions": {
+        "continue_improving_route": 6
+      },
+      "median_detection_seconds": 0.0011915735085494816,
+      "max_detection_seconds": 0.001308476086705923,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 1050184,
+      "median_route_seconds": 0.7785999024636112,
+      "median_guided_seconds": 0.19441015500342473,
+      "max_route_overrun_seconds": 0.005605999962426722,
+      "cpu_seconds": 5.997896397999995,
+      "elapsed_seconds": 6.013993498985656,
+      "routed_only": [
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "decisions": {
+        "no_partition": 6
+      },
+      "median_detection_seconds": 0.0021562925539910793,
+      "max_detection_seconds": 0.0023339330218732357,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 1047424,
+      "median_route_seconds": 0.0,
+      "median_guided_seconds": 0.9724868210032582,
+      "max_route_overrun_seconds": 0,
+      "cpu_seconds": 5.974510192999986,
+      "elapsed_seconds": 6.099230476189405,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "tanner-432_8_33",
+      "decisions": {
+        "no_partition": 6
+      },
+      "median_detection_seconds": 0.008829460479319096,
+      "max_detection_seconds": 0.010840924922376871,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 443689,
+      "median_route_seconds": 0.0,
+      "median_guided_seconds": 0.9881744050071575,
+      "max_route_overrun_seconds": 0,
+      "cpu_seconds": 5.988564698999937,
+      "elapsed_seconds": 6.1858179500559345,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "mitten-975-195",
+      "decisions": {
+        "no_partition": 6
+      },
+      "median_detection_seconds": 1.3475539162755013e-05,
+      "max_detection_seconds": 1.461198553442955e-05,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 0,
+      "median_route_seconds": 0.0,
+      "median_guided_seconds": 0.9648130780551583,
+      "max_route_overrun_seconds": 0,
+      "cpu_seconds": 5.9941662689999475,
+      "elapsed_seconds": 6.031574412016198,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "toric-1000",
+      "decisions": {
+        "no_partition": 6
+      },
+      "median_detection_seconds": 0.0063244939665310085,
+      "max_detection_seconds": 0.008589547011069953,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 2163025,
+      "median_route_seconds": 0.0,
+      "median_guided_seconds": 0.9875742875155993,
+      "max_route_overrun_seconds": 0,
+      "cpu_seconds": 5.999380606999921,
+      "elapsed_seconds": 6.033137810998596,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "fresh-bb-960",
+      "decisions": {
+        "no_partition": 6
+      },
+      "median_detection_seconds": 0.005366537952795625,
+      "max_detection_seconds": 0.006102040992118418,
+      "max_detection_overrun_seconds": 0,
+      "max_detector_workspace_bytes": 1999705,
+      "median_route_seconds": 0.0,
+      "median_guided_seconds": 0.9803557365084998,
+      "max_route_overrun_seconds": 0,
+      "cpu_seconds": 5.995492179000053,
+      "elapsed_seconds": 6.028903237078339,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    }
+  ]
+}

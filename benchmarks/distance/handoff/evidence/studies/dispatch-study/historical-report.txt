@@ -1,0 +1,159 @@
+# Bounded structural dispatcher
+
+Implemented a native C++ detector and a Python scheduler that route suitable
+matrices to the existing full single-block search, with native guided fallback.
+The previous measured search engines and study artifacts remain unchanged.
+
+**The bounded prepass works: structural gains survive fresh column permutations,
+and all 29 matched outcomes with rejected partitions tie guided search.** The
+current pilot policy still over-allocates time to a weak route on Board682. Keep
+the dispatcher as an explicit experimental choice until that allocation improves;
+it is not a universally better replacement for guided or incremental search.
+
+## Implementation
+
+- [C++ detector](../../../../native/structure_dispatch/detect.cpp): uint16 overlap
+  counts, cheap confidence rejection, a bijective-row-maxima fast path, and
+  preallocated assignment buffers with cooperative clock checks. It avoids the
+  previous full orbit enumeration and does not call SciPy assignment.
+- [Scheduler/API](../../dispatch_search.py): identical common logical
+  initialization; min(50 ms, 2% of sector budget) for detection; a
+  min(100 ms, 10% of remaining time) route pilot; continue only if the pilot
+  improves initialization, targeting a 20% reserve for guided search.
+- [Build/API documentation](../../../../native/structure_dispatch/README.md),
+  [synthetic tests](../../test_dispatch.py),
+  [persisted benchmark driver](../../study_dispatch.py), and
+  [auditor/report generator](../../audit_dispatch.py).
+
+The detector caps input dimensions at 4096 rows/columns, row weight at 64, and
+score/matching work. It rejects oversized shapes before Python input conversion.
+These caps apply to detection; unsupported matrices use the existing native
+fallback. The largest observed modeled detector workspace is 2,163,025 bytes,
+approximately 2.06 MiB. It is temporary scratch storage, not process RSS.
+
+The maximum observed total detection time is **10.895 ms**, including conversion
+and both proposals. No detector call sequence exceeds its allotted budget in
+this study. Mitten's shape rejection takes about 0.01 ms per sector. Native
+allocation, kernel construction and final batches remain noninterruptible;
+the deadlines and guided reserve are cooperative targets, not hard real-time
+guarantees. The clock, work, and shape limits are documented in the
+[frozen plan](../../strategy_prototypes/DISPATCH_PLAN.md).
+
+## Matched results
+
+The screen measures 13 inputs × four methods × three seeds at 2 seconds/code:
+seven originals and six fresh relabelings. The second grid measures seven
+originals × four methods × two different seeds at 10 seconds/code. Each budget
+splits equally between X and Z. Timed configurations run serially on CPU0 with
+one search thread. Common preparation, initialization, detection, setup, search,
+and witness delivery all count against the deadline. Reference supports and
+targets never enter search. The two budgets are independent runs, not prefixes.
+
+Selected **2-second medians** on fresh column permutations:
+
+| Input | Guided | Existing circulant with fallback | Dispatcher |
+|---|---:|---:|---:|
+| Board700 columns shuffled | 78 | 78 | 28 |
+| Regression690 columns shuffled | 84 | 84 | 48 |
+| Board700 columns and rows shuffled | 78 | 78 | 78 |
+| Regression690 columns and rows shuffled | 84 | 84 | 84 |
+
+The 28 and 48 come from the routed kernel, not initialization or fallback. They
+appear in all three seeds on both original and column-permuted layouts.
+Independent row shuffling still defeats structure recovery, but now leads to
+prompt fallback. New permutations use RNG 1460 rather than the previous study's
+RNG 1230; these are fresh layouts of known codes, not held-out code families.
+
+**10-second medians** on the original corpus:
+
+| Code | Incremental | Guided | Circulant with fallback | Dispatcher |
+|---|---:|---:|---:|---:|
+| Board700 | 76 | 76 | 76 | 28 |
+| Board682 | 81.5 | 81.5 | 83.5 | 83.5 |
+| Regression690 | 82.5 | 82 | 48 | 48 |
+| Tanner432 | 31 | 30 | 30 | 30 |
+| Mitten975 | 25 | 24 | 24 | 24 |
+| Toric1000 | 20 | 20 | 20 | 20 |
+| Bicycle960 | 60 | 60 | 60 | 60 |
+
+Across all **53 matched case/seed outcomes**, dispatcher versus each control:
+
+| Control | Lower weight | Equal | Higher weight |
+|---|---:|---:|---:|
+| Incremental | 30 | 17 | 6 |
+| Guided | 18 | 32 | 3 |
+| Circulant with fallback | 14 | 38 | 1 |
+
+Here “lower” means a lower witnessed upper bound, not a proven lower bound on
+distance. All three regressions against guided occur on Board682. With rejected
+partitions, every one of the 29 paired outcomes ties guided. Tanner, Mitten, toric
+and bicycle960 also match guided's median at each budget. Toric 20 and bicycle 60
+already come from common initialization and are not new search gains.
+
+The [2-second report](screen-2s/REPORT.md) and
+[10-second report](original-10s/REPORT.md) give all cases, raw seed values,
+routed-only outputs, decisions, fallback allocation and timing. Exact aggregate
+data are in [comparison.json](comparison.json) and
+[decision-summary.json](decision-summary.json).
+
+## Remaining limitation and next refinement
+
+Board682 illustrates the policy weakness: a route can improve a mediocre
+initialization yet remain worse than generic search after more time. At two
+seconds its dispatcher median is 84 versus guided 84 and incremental 82. At ten
+seconds it is 83.5 versus guided 81.5. The 20% reserve sometimes rescues the route's
+answer slightly, but does not eliminate the regression. A stronger next policy
+would compare native and routed progress through resumable pilot sessions, then
+adjust allocation. That policy has not been implemented or measured here.
+
+Recovery still depends on useful check-row order. Confidence and two equal cycles
+are routing evidence, not proofs of a code automorphism. Every accepted partition
+uses kernels of the actual matrices and actual logical parity checks, and every
+returned support is independently validated. None of these experiments improves
+the frozen hard reference witnesses: Board700 28, Board682 72, Regression690 28.
+The useful gain is automated access to known structural shortcuts with little
+fallback overhead.
+
+## Validation and reproduction
+
+Both grids passed complete-grid, identical-initialization, source/binary/archive,
+matrix/transform, route-partition, decision/export-counter, and saved-witness
+identity audits. Sources and binaries are identical across the two budgets;
+common initialization is also identical. All **13,519 saved witness documents**
+were checked through the existing kit path. All 20 late exports are preserved
+without deadline credit. Only the existing n>700 fixture size-cap exemption is
+used. No trusted verifier, leaderboard, CI, commit or publication changes.
+
+There are **29 passing unit/regression tests**: 15 new detector/scheduler/audit
+tests and 14 existing wrapper/routing tests. They include independent assignment
+comparison, column relabeling, deletion noise, rejection/deadline handling,
+inverse support mapping, successful and rejected pilots, guided reservation,
+late output, save failure propagation, and corrupted-audit rejection. See
+[tests.txt](tests.txt) and [lint.txt](lint.txt).
+
+The main grids allocate 872 seconds of search time; observed timed wall time is
+876.48 seconds and CPU time 871.40 seconds, excluding imports, matrix loading and
+independent validation/persistence. [hardware.json](hardware.json),
+[compiler.txt](compiler.txt) and [environment-freeze.txt](environment-freeze.txt)
+record the environment. The matrix-only [detection diagnostic](detection.json)
+predates witness search; policy was not tuned on timed corpus results.
+
+Build the native detector as documented, then reproduce with fresh output paths:
+
+```sh
+.venv-benchmark/bin/python benchmarks/distance/study_dispatch.py --output <new-short-output>
+.venv-benchmark/bin/python benchmarks/distance/audit_dispatch.py <completed-short-output>
+```
+
+The frozen plan specifies the budgets and seeds; [the long-grid environment](original-10s/environment.json) records the exact seven original case IDs and arguments.
+Each grid has raw timestamped supports, saved-candidate counts, 116 measured source
+files across three source archives, binary hashes, and a runner log. A supplemental
+[test dependency archive](test-dependencies.tar.gz) includes the existing shared
+toy fixture and adapter; their bytes were checked against the previous frozen
+routing archive. Audits require the live measured sources/binaries and local kit
+staging documents. All raw supports are also retained in the grid for replay.
+
+[validation-summary.json](validation-summary.json) indexes the checks and
+[SHA256SUMS.json](SHA256SUMS.json) pins the final artifact files. These are
+experimental witnessed upper bounds, not exact-distance certificates or full
+candidate-gate passes.

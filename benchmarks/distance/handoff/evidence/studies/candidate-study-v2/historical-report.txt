@@ -1,0 +1,234 @@
+# Three candidate search approaches
+
+**Complete:** 198 frozen main configurations and 18 separately labeled routing
+diagnostics passed their audits, checking 21,263 saved witness documents. The
+candidate and routing suites passed 33 synthetic unit tests. Measured sources and
+binaries remained identical across the three main grids.
+
+**Recommendation:** prioritize a cheap, bounded structure detector that routes
+to the existing full single-block search, with a generic native fallback. This
+restores useful searches under hidden column layouts. Redesign the reduced
+algebraic spaces before expanding their compute budget; profile and amortize the
+decoder's setup before judging that broader family of methods. None of the new
+candidates improves the frozen best reference bound on the three original hard
+inputs. The new practical gain is recovering access to known structural shortcuts.
+
+Three isolated implementations were developed and reviewed in parallel:
+
+- [Matrix structure recovery](../../strategy_prototypes/matrix_structure_v2/README.md):
+  infer column translations from check-row incidence, complete missing check
+  orbits, and transfer logical representatives under verified sector exchanges.
+- [Reduced algebraic spaces](../../strategy_prototypes/reduced_space_v2/README.md):
+  packed C++ search over coupled polynomial quotient generators and separately
+  labeled single-block spaces, combining up to four basis rows with pruning.
+- [Decoder search](../../strategy_prototypes/decoder_search_v2/README.md):
+  BP+OSD solves the zero stabilizer syndrome with an additional nonzero logical
+  parity constraint, with randomized detectors, coordinates and channel costs.
+
+Timed configurations run serially on CPU0 with one search thread. All methods
+receive identical common logical initialization inside the deadline. Candidate
+methods that finish early or are inapplicable give the remaining sector time to
+a fresh guided search. Reports distinguish these fallback results from actual
+candidate outputs. The controls are native incremental, guided, and the existing
+single-block circulant search. Reference supports and target weights are used
+only for evaluation and validation, never as search inputs.
+
+The [frozen plan](../../strategy_prototypes/CANDIDATES_PLAN.md) specifies
+198 configurations: seven original inputs × six methods × three seeds at
+10 seconds/code, six relabeled hard inputs × six methods × one seed at
+10 seconds/code, and three original hard inputs × six methods × two fresh seeds
+at 60 seconds/code. Each budget splits equally between X and Z. Long runs are
+independent, not extensions of short runs. Native calls can overrun; every late
+valid export is retained but receives no deadline credit.
+
+## Budget scaling on the three hard originals
+
+Each cell is the median delivered upper bound at **10 seconds → 60 seconds**.
+The short grid uses three seeds and the long grid uses two different seeds;
+these are screening results, not a paired estimate of budget scaling.
+
+| Code | Reference | Incremental | Guided | Circulant | Structure | Reduced | Decoder |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Board700 | 28 | 72 → 71.5 | 75 → 71 | 75 → 71 | 28 → 28 | 28 → 28 | 89 → 89 |
+| Board682 | 72 | 84 → 77.5 | 82 → 80.5 | 76 → 76 | 82 → 80.5 | 88 → 77 | 96 → 96 |
+| Regression690 | 28 | 83 → 80 | 82 → 80.5 | 48 → 48 | 82 → 80.5 | 56 → 56 | 93 → 93 |
+
+Circulant on Board700 and structure on the two full bicycle cases get their
+improvements through guided fallback. The reduced method's improvements come
+from single-block branches. Its coupled branch improves initialization in **0 of
+30 hard-case sectors** across both budgets. On Board682, incremental's two long
+runs return 81 and 74, demonstrating substantial seed variation and retaining a
+reason to keep multiple native search strategies available.
+
+The [full tables](TABLES.md), [machine-readable aggregation](comparison.json),
+and [60-second report](hard-60s/REPORT.md) retain all methods and per-seed results.
+The [long decoder analysis](hard-60s-decoder-analysis.md) confirms that more time
+permits timely decoder outputs, but none improves the common hard-case starting
+bound. Board682 and Regression690 still complete only three trials per sector,
+with the final trial arriving late. This is a negative result for these settings,
+not a general rejection of decoder-based distance search.
+
+## Short-budget findings across the corpus
+
+The [seven-code screen](screen-10s/REPORT.md) contains 126 configurations and
+10,791 saved witness documents. All 36 [relabeling controls](relabel-10s/REPORT.md)
+also passed their audit, checking another 2,066 saved documents.
+
+- Both structural candidates reach 28 on Board700, versus guided's median 75.
+  Structure recovery delivers the first X witness in about 50–54 ms, including
+  preparation and initialization. The reduced candidate's gain comes from its
+  single-block branch, not its coupled branch.
+- The existing circulant search remains strongest on Board682 and Regression690:
+  medians 76 and 48, versus reduced-space 88 and 56 and guided 82 on both.
+- Structure recovery retains 28 after a random qubit permutation of Board700.
+  It fails after independent check-row shuffles as well. It uses useful row-order
+  clues; this is not general code-equivalence recovery.
+- Unproductive structure proposals can consume the budget: Mitten's median
+  worsens from guided 24 to 30. Cheap rejection and a capped analysis budget are
+  necessary before making this a default dispatch path.
+- The decoder wins none of 21 paired original-code runs against guided. Its
+  Mitten outputs 28/24/26 are competitive but less reliable than guided 24/24/24.
+  On Board682 and Regression690 its first trial exceeds the five-second sector
+  deadline, so none of its outputs receives short-budget credit.
+- Toric 20 and bicycle960's 60 already come from common initialization. Verified
+  sector transfer improves bicycle960's Z bound from 180 to 60; it does not improve
+  the code-level minimum of 60.
+
+These are witnessed upper bounds. Case labels are identifiers, not authoritative
+reference values: the frozen target for Board682 is 72 and Tanner's is 32.
+
+## Separate exploratory routing diagnostic
+
+After freezing the main comparison, a small [routing prototype](../../strategy_prototypes/structure_route_v2/README.md)
+uses inferred two-cycle partitions to reorder columns for the **existing** native
+single-block kernel. It bypasses only the old layout recognizer and checks the
+actual kernel, logical parity and inverse mapping. It does not assume a proposed
+permutation is a proven automorphism.
+
+This is a separate 18-configuration, one-seed diagnostic at **2 seconds/code**,
+including common preparation, recovery, native setup and delivery. It was chosen
+after seeing the main screen and is excluded from the frozen ranking.
+
+| Input | Existing circulant with fallback | Inferred-block routing with fallback |
+|---|---:|---:|
+| Board700 original | 75 | 28 |
+| Board700 columns shuffled | 77 | 28 |
+| Board700 columns and rows shuffled | 77 | 77 |
+| Board682 original | 84 | 84 |
+| Board682 columns shuffled | 84 | 85 |
+| Board682 columns and rows shuffled | 84 | 84 |
+| Regression690 original | 48 | 48 |
+| Regression690 columns shuffled | 84 | 48 |
+| Regression690 columns and rows shuffled | 84 | 84 |
+
+The restored 28 and 48 are actual routed-kernel outputs, not initialization or
+fallback. All row-shuffled cases use guided fallback. Board682 shows no quality
+gain in this short diagnostic. The result supports structure-based routing for
+hidden columns, while leaving row-order-independent recovery unresolved. See the
+[complete routing report](route-2s/REPORT.md) for stage attribution and timing;
+all 1,132 saved documents passed its separate audit.
+
+## Why the candidates differ
+
+The [exact reduced-space membership analysis](reduced-analysis/README.md) checks
+12 existing witnesses against the actual matrices and reconstructed search spaces.
+The coupled branch uses 94–97% of branch time in the short hard-case runs without
+improving common initialization. All six analyzed short-screen weight 48 circulant witnesses
+on Regression690 lie outside every proposed reduced space. This excludes those
+particular witnesses; it does not prove that no equally light logical exists in
+the reduced spaces. The full individual-block kernels are larger than the
+common-factor construction searches. Space coverage and time allocation both
+need attention before micro-optimizing this prototype.
+
+The separate [post-hoc reference membership check](reference-membership/README.md)
+finds that both stored Regression690 weight-28 references and Board682's Z
+weight-72 reference are outside all three reduced spaces. Board700's stored
+weight-28 references are inside the coupled space, but its coupled search fails
+to find them; its successful single-block witnesses are different vectors.
+Thus coverage and search quality are distinct problems. This check reads frozen
+evaluation witnesses only after algorithm freeze and supplies nothing to search.
+It does not prove the absence of all equally light representatives in any space.
+
+The [decoder analysis](screen-10s-decoder-analysis.md) separates construction,
+decoding and deadline overruns. One trial takes roughly 12–14 seconds on Board682
+and Regression690, approximately half in construction and half in decoding.
+Every observed BP run uses all 100 iterations without convergence; OSD supplies
+the valid output. The added logical checks are much denser than original checks,
+but attributing the failure or setup cost specifically to density remains an
+inference. Reusing prepared decoders and trying lighter detectors require a new
+controlled experiment; they are not measured improvements here.
+
+## Next experiments worth running
+
+1. Give structure analysis a small explicit time allocation and a cheap rejection
+   rule, route useful partitions to full individual-block kernels, and preserve
+   generic native search for unsupported inputs. Extend recovery beyond useful
+   check-row ordering. Repeat routing with more seeds and held-out codes before
+   selecting a default dispatcher.
+2. For a more ambitious algebraic follow-up, include the missing parts of the
+   kernel decomposition and allocate time by wall clock rather than branch
+   visits. Use the post-hoc membership findings to distinguish coverage from
+   search difficulty, while keeping reference witnesses out of the next search.
+   The current coupled beam should not receive a large runtime expansion.
+3. If revisiting decoding, profile native construction versus BP/OSD, amortize a
+   prepared decoder across several reliability perturbations, and test lighter
+   logical detectors. Verify that parameter updates actually reach both BP and
+   OSD. These changes deserve an independent comparison, particularly on Mitten.
+
+## Evidence and reproduction
+
+Each grid retains original and relabeled matrices, actual permutations, source
+archives, source/binary SHA256 pins, raw timestamped X/Z support logs, per-run
+records, and independent validation/persistence counts. Every distinct exported
+support is saved through the existing research kit; late and non-improving
+outputs are preserved too. The only packaging exemption is the existing size
+cap exemption for fixtures with more than 700 qubits. No trusted verifier or
+leaderboard file changed, no full submission gate ran, and no exact distance is
+claimed.
+
+Package versions are in [environment-freeze.txt](environment-freeze.txt), including
+ldpc 2.4.1, SciPy 1.16.1 and NumPy 2.2.6. [hardware.json](hardware.json) records the
+VM CPU/cache report. Native workspace counters exclude Python/NumPy allocations
+and are not process RSS. The main source snapshots contain 106 files per grid.
+
+The main grids allocate 3,780 seconds of search budgets. Actual timed search
+elapsed totals 4,027.88 seconds (4,021.85 CPU seconds), mostly because coarse
+decoder calls overrun. All 83 late main-grid exports and 16 late routing exports
+are retained without deadline credit. These totals exclude independent witness
+validation/persistence, imports, matrix loading and synthetic warmup.
+
+The common runner and audit entry points are:
+
+```sh
+.venv-benchmark/bin/python benchmarks/distance/study_candidates.py --output <new-output>
+.venv-benchmark/bin/python benchmarks/distance/report_candidates.py <completed-output>
+.venv-benchmark/bin/python benchmarks/distance/audit_candidates.py <completed-output>
+```
+
+Run each prototype's documented build first. The grid runner archives its exact
+settings; the frozen plan lists the additional relabel and 60-second arguments.
+Audits require the live measured sources/binaries and locally staged witness
+documents. Raw supports and measured source archives are also retained in each
+grid for later independent reconstruction.
+
+The candidate wrapper and three prototype suites passed 27 synthetic unit tests;
+the separate routing prototype passed six. The trusted validator integrity check
+passed for all 27 pinned files. These checks complement the corpus witness audits;
+they are not distance certificates.
+
+For the combined synthetic suites, use importlib mode because several isolated
+prototypes intentionally have the same test filename:
+
+```sh
+PYTHONPATH=benchmarks/distance .venv-benchmark/bin/python -m pytest --import-mode=importlib -q \
+  benchmarks/distance/test_candidates.py \
+  benchmarks/distance/strategy_prototypes/matrix_structure_v2 \
+  benchmarks/distance/strategy_prototypes/reduced_space_v2 \
+  benchmarks/distance/strategy_prototypes/decoder_search_v2 \
+  benchmarks/distance/strategy_prototypes/structure_route_v2
+```
+
+[validation-summary.json](validation-summary.json) indexes completed checks and
+[SHA256SUMS.json](SHA256SUMS.json) pins the final artifact files. The measured
+source archives remain unchanged; analysis sources and their input hashes are
+retained separately.

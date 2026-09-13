@@ -1,0 +1,372 @@
+{
+  "configurations": 210,
+  "seeds": 5,
+  "cells": [
+    {
+      "case": "board-700-222-28",
+      "method": "fresh",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 79,
+      "no_witness": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "incremental",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 77,
+      "no_witness": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "circulant",
+      "applicable": 0,
+      "hits": 0,
+      "median_best": null,
+      "no_witness": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 75,
+      "no_witness": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "descent",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 77,
+      "no_witness": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "structure",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 80,
+      "no_witness": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "fresh",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 87,
+      "no_witness": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "incremental",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 85,
+      "no_witness": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "circulant",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 86,
+      "no_witness": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 84,
+      "no_witness": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "descent",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 86,
+      "no_witness": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "structure",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 90,
+      "no_witness": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "fresh",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 88,
+      "no_witness": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "incremental",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 84,
+      "no_witness": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "circulant",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 48,
+      "no_witness": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 83,
+      "no_witness": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "descent",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 86,
+      "no_witness": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "structure",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 90,
+      "no_witness": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "fresh",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 38,
+      "no_witness": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "incremental",
+      "applicable": 5,
+      "hits": 2,
+      "median_best": 33,
+      "no_witness": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "circulant",
+      "applicable": 0,
+      "hits": 0,
+      "median_best": null,
+      "no_witness": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "guided",
+      "applicable": 5,
+      "hits": 4,
+      "median_best": 30,
+      "no_witness": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "descent",
+      "applicable": 5,
+      "hits": 4,
+      "median_best": 30,
+      "no_witness": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "structure",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 40,
+      "no_witness": 0
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "fresh",
+      "applicable": 5,
+      "hits": 1,
+      "median_best": 35,
+      "no_witness": 0
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "incremental",
+      "applicable": 5,
+      "hits": 1,
+      "median_best": 30,
+      "no_witness": 0
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "circulant",
+      "applicable": 0,
+      "hits": 0,
+      "median_best": null,
+      "no_witness": 0
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "guided",
+      "applicable": 5,
+      "hits": 3,
+      "median_best": 24,
+      "no_witness": 0
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "descent",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 36,
+      "no_witness": 0
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "structure",
+      "applicable": 5,
+      "hits": 1,
+      "median_best": 42,
+      "no_witness": 0
+    },
+    {
+      "case": "toric-1000",
+      "method": "fresh",
+      "applicable": 5,
+      "hits": 1,
+      "median_best": 22,
+      "no_witness": 0
+    },
+    {
+      "case": "toric-1000",
+      "method": "incremental",
+      "applicable": 5,
+      "hits": 2,
+      "median_best": 22,
+      "no_witness": 0
+    },
+    {
+      "case": "toric-1000",
+      "method": "circulant",
+      "applicable": 0,
+      "hits": 0,
+      "median_best": null,
+      "no_witness": 0
+    },
+    {
+      "case": "toric-1000",
+      "method": "guided",
+      "applicable": 5,
+      "hits": 5,
+      "median_best": 20,
+      "no_witness": 0
+    },
+    {
+      "case": "toric-1000",
+      "method": "descent",
+      "applicable": 5,
+      "hits": 5,
+      "median_best": 20,
+      "no_witness": 0
+    },
+    {
+      "case": "toric-1000",
+      "method": "structure",
+      "applicable": 5,
+      "hits": 5,
+      "median_best": 20,
+      "no_witness": 0
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "fresh",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 164,
+      "no_witness": 0
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "incremental",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 156,
+      "no_witness": 0
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "circulant",
+      "applicable": 0,
+      "hits": 0,
+      "median_best": null,
+      "no_witness": 0
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "guided",
+      "applicable": 5,
+      "hits": 5,
+      "median_best": 144,
+      "no_witness": 0
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "descent",
+      "applicable": 5,
+      "hits": 5,
+      "median_best": 114,
+      "no_witness": 0
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "structure",
+      "applicable": 5,
+      "hits": 0,
+      "median_best": 160,
+      "no_witness": 0
+    }
+  ],
+  "paired_vs_incremental": {
+    "fresh": {
+      "lower": 8,
+      "equal": 3,
+      "higher": 24
+    },
+    "circulant": {
+      "lower": 5,
+      "equal": 3,
+      "higher": 2
+    },
+    "guided": {
+      "lower": 25,
+      "equal": 4,
+      "higher": 6
+    },
+    "descent": {
+      "lower": 16,
+      "equal": 8,
+      "higher": 11
+    },
+    "structure": {
+      "lower": 5,
+      "equal": 4,
+      "higher": 26
+    }
+  },
+  "observations": 139985,
+  "saved_candidates": 138718,
+  "late_observations": 395
+}

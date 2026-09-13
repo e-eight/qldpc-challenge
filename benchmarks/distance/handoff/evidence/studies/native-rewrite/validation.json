@@ -1,0 +1,11 @@
+{
+  "python_tests_passed": 51,
+  "core_release": "passed",
+  "core_address_undefined_sanitizers": "passed with ASAN_OPTIONS=detect_leaks=0; LeakSanitizer unsupported under ptrace",
+  "portable_wheel": "built from sdist, installed and imported outside repository with host_tuned=False",
+  "standalone_sdist_cmake": "built and passed core test outside repository",
+  "ruff": "passed",
+  "verifier_integrity": "27 pinned files match",
+  "final_configurations": 167,
+  "candidate_documents_saved": 3521
+}

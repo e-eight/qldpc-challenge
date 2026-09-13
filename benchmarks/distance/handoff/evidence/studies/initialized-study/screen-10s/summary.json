@@ -1,0 +1,857 @@
+{
+  "cells": [
+    {
+      "case": "board-700-222-28",
+      "method": "incremental",
+      "seconds": 0.1,
+      "weights": [
+        83,
+        81,
+        82
+      ],
+      "median": 82,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "seconds": 0.1,
+      "weights": [
+        84,
+        81,
+        80
+      ],
+      "median": 81,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "weights": [
+        85,
+        81,
+        80
+      ],
+      "median": 81,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "incremental",
+      "seconds": 0.1,
+      "weights": [
+        84,
+        89,
+        84
+      ],
+      "median": 84,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "seconds": 0.1,
+      "weights": [
+        91,
+        92,
+        93
+      ],
+      "median": 92,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "weights": [
+        91,
+        92,
+        93
+      ],
+      "median": 92,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "incremental",
+      "seconds": 0.1,
+      "weights": [
+        89,
+        87,
+        92
+      ],
+      "median": 89,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "seconds": 0.1,
+      "weights": [
+        91,
+        91,
+        90
+      ],
+      "median": 91,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "weights": [
+        91,
+        93,
+        90
+      ],
+      "median": 91,
+      "hits": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "incremental",
+      "seconds": 0.1,
+      "weights": [
+        36,
+        36,
+        36
+      ],
+      "median": 36,
+      "hits": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "guided",
+      "seconds": 0.1,
+      "weights": [
+        36,
+        36,
+        36
+      ],
+      "median": 36,
+      "hits": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "weights": [
+        36,
+        36,
+        36
+      ],
+      "median": 36,
+      "hits": 0
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "incremental",
+      "seconds": 0.1,
+      "weights": [
+        60,
+        44,
+        70
+      ],
+      "median": 60,
+      "hits": 0
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "guided",
+      "seconds": 0.1,
+      "weights": [
+        70,
+        70,
+        70
+      ],
+      "median": 70,
+      "hits": 0
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "weights": [
+        70,
+        70,
+        70
+      ],
+      "median": 70,
+      "hits": 0
+    },
+    {
+      "case": "toric-1000",
+      "method": "incremental",
+      "seconds": 0.1,
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "hits": 3
+    },
+    {
+      "case": "toric-1000",
+      "method": "guided",
+      "seconds": 0.1,
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "hits": 3
+    },
+    {
+      "case": "toric-1000",
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "hits": 3
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "incremental",
+      "seconds": 0.1,
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "hits": 3
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "guided",
+      "seconds": 0.1,
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "hits": 3
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "hits": 3
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "incremental",
+      "seconds": 2,
+      "weights": [
+        79,
+        78,
+        77
+      ],
+      "median": 78,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "seconds": 2,
+      "weights": [
+        77,
+        73,
+        79
+      ],
+      "median": 77,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided-refine",
+      "seconds": 2,
+      "weights": [
+        77,
+        73,
+        79
+      ],
+      "median": 77,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "incremental",
+      "seconds": 2,
+      "weights": [
+        82,
+        83,
+        84
+      ],
+      "median": 83,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "seconds": 2,
+      "weights": [
+        82,
+        85,
+        86
+      ],
+      "median": 85,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided-refine",
+      "seconds": 2,
+      "weights": [
+        82,
+        88,
+        86
+      ],
+      "median": 86,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "incremental",
+      "seconds": 2,
+      "weights": [
+        84,
+        83,
+        84
+      ],
+      "median": 84,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "seconds": 2,
+      "weights": [
+        83,
+        84,
+        84
+      ],
+      "median": 84,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided-refine",
+      "seconds": 2,
+      "weights": [
+        83,
+        84,
+        84
+      ],
+      "median": 84,
+      "hits": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "incremental",
+      "seconds": 2,
+      "weights": [
+        36,
+        35,
+        34
+      ],
+      "median": 35,
+      "hits": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "guided",
+      "seconds": 2,
+      "weights": [
+        29,
+        32,
+        30
+      ],
+      "median": 30,
+      "hits": 3
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "guided-refine",
+      "seconds": 2,
+      "weights": [
+        29,
+        32,
+        30
+      ],
+      "median": 30,
+      "hits": 3
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "incremental",
+      "seconds": 2,
+      "weights": [
+        26,
+        24,
+        24
+      ],
+      "median": 24,
+      "hits": 2
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "guided",
+      "seconds": 2,
+      "weights": [
+        28,
+        24,
+        24
+      ],
+      "median": 24,
+      "hits": 2
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "guided-refine",
+      "seconds": 2,
+      "weights": [
+        28,
+        24,
+        24
+      ],
+      "median": 24,
+      "hits": 2
+    },
+    {
+      "case": "toric-1000",
+      "method": "incremental",
+      "seconds": 2,
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "hits": 3
+    },
+    {
+      "case": "toric-1000",
+      "method": "guided",
+      "seconds": 2,
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "hits": 3
+    },
+    {
+      "case": "toric-1000",
+      "method": "guided-refine",
+      "seconds": 2,
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "hits": 3
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "incremental",
+      "seconds": 2,
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "hits": 3
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "guided",
+      "seconds": 2,
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "hits": 3
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "guided-refine",
+      "seconds": 2,
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "hits": 3
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "incremental",
+      "seconds": 10,
+      "weights": [
+        76,
+        71,
+        76
+      ],
+      "median": 76,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "seconds": 10,
+      "weights": [
+        73,
+        73,
+        74
+      ],
+      "median": 73,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided-refine",
+      "seconds": 10,
+      "weights": [
+        73,
+        73,
+        74
+      ],
+      "median": 73,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "incremental",
+      "seconds": 10,
+      "weights": [
+        82,
+        80,
+        83
+      ],
+      "median": 82,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "seconds": 10,
+      "weights": [
+        82,
+        83,
+        80
+      ],
+      "median": 82,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided-refine",
+      "seconds": 10,
+      "weights": [
+        82,
+        83,
+        80
+      ],
+      "median": 82,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "incremental",
+      "seconds": 10,
+      "weights": [
+        79,
+        83,
+        84
+      ],
+      "median": 83,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "seconds": 10,
+      "weights": [
+        83,
+        84,
+        81
+      ],
+      "median": 83,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided-refine",
+      "seconds": 10,
+      "weights": [
+        83,
+        84,
+        81
+      ],
+      "median": 83,
+      "hits": 0
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "incremental",
+      "seconds": 10,
+      "weights": [
+        32,
+        32,
+        31
+      ],
+      "median": 32,
+      "hits": 3
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "guided",
+      "seconds": 10,
+      "weights": [
+        29,
+        29,
+        29
+      ],
+      "median": 29,
+      "hits": 3
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "guided-refine",
+      "seconds": 10,
+      "weights": [
+        29,
+        29,
+        29
+      ],
+      "median": 29,
+      "hits": 3
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "incremental",
+      "seconds": 10,
+      "weights": [
+        24,
+        24,
+        24
+      ],
+      "median": 24,
+      "hits": 3
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "guided",
+      "seconds": 10,
+      "weights": [
+        24,
+        24,
+        24
+      ],
+      "median": 24,
+      "hits": 3
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "guided-refine",
+      "seconds": 10,
+      "weights": [
+        24,
+        24,
+        24
+      ],
+      "median": 24,
+      "hits": 3
+    },
+    {
+      "case": "toric-1000",
+      "method": "incremental",
+      "seconds": 10,
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "hits": 3
+    },
+    {
+      "case": "toric-1000",
+      "method": "guided",
+      "seconds": 10,
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "hits": 3
+    },
+    {
+      "case": "toric-1000",
+      "method": "guided-refine",
+      "seconds": 10,
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "hits": 3
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "incremental",
+      "seconds": 10,
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "hits": 3
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "guided",
+      "seconds": 10,
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "hits": 3
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "guided-refine",
+      "seconds": 10,
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "hits": 3
+    }
+  ],
+  "paired": [
+    {
+      "method": "incremental",
+      "seconds": 0.1,
+      "lower": 8,
+      "equal": 11,
+      "higher": 2
+    },
+    {
+      "method": "incremental",
+      "seconds": 2,
+      "lower": 5,
+      "equal": 10,
+      "higher": 6
+    },
+    {
+      "method": "incremental",
+      "seconds": 10,
+      "lower": 4,
+      "equal": 10,
+      "higher": 7
+    },
+    {
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "lower": 0,
+      "equal": 19,
+      "higher": 2
+    },
+    {
+      "method": "guided-refine",
+      "seconds": 2,
+      "lower": 0,
+      "equal": 20,
+      "higher": 1
+    },
+    {
+      "method": "guided-refine",
+      "seconds": 10,
+      "lower": 0,
+      "equal": 21,
+      "higher": 0
+    }
+  ],
+  "refinement": [
+    {
+      "case": "board-700-222-28",
+      "descent_calls": 62,
+      "descent_improvements": 0,
+      "global_descent_improvements": 0,
+      "descent_seconds": 0.31343907304108143
+    },
+    {
+      "case": "board-682-172-79",
+      "descent_calls": 62,
+      "descent_improvements": 0,
+      "global_descent_improvements": 0,
+      "descent_seconds": 0.3135501791257411
+    },
+    {
+      "case": "regression-690-182",
+      "descent_calls": 58,
+      "descent_improvements": 0,
+      "global_descent_improvements": 0,
+      "descent_seconds": 0.2932725573191419
+    },
+    {
+      "case": "tanner-432_8_33",
+      "descent_calls": 62,
+      "descent_improvements": 13,
+      "global_descent_improvements": 11,
+      "descent_seconds": 0.31224540108814836
+    },
+    {
+      "case": "mitten-975-195",
+      "descent_calls": 58,
+      "descent_improvements": 1,
+      "global_descent_improvements": 0,
+      "descent_seconds": 0.29270311153959483
+    },
+    {
+      "case": "toric-1000",
+      "descent_calls": 18,
+      "descent_improvements": 0,
+      "global_descent_improvements": 0,
+      "descent_seconds": 0.09066618722863495
+    },
+    {
+      "case": "fresh-bb-960",
+      "descent_calls": 115,
+      "descent_improvements": 890,
+      "global_descent_improvements": 53,
+      "descent_seconds": 0.5880520803621039
+    }
+  ],
+  "saved_candidates": 4375,
+  "late_events": 0
+}

@@ -141,6 +141,14 @@ def main(source, output):
     if not actual_refutations:
         lines.append("| None observed within the pilot deadlines | — | — | — | — |")
     methods = environment["methods"]
+    if environment.get("cpp_control_repair"):
+        lines.insert(
+            4,
+            "The C++ control was rerun separately after correcting overlapping batch seeds; "
+            "it was not interleaved with the retained measurements of the other methods. "
+            "The environment and source archive retain both measurement origins.\n",
+        )
+    legacy_cpp = environment.get("cpp_batch_seed_policy") != "blake2b(study_seed,batch_index)"
     grouped = collections.defaultdict(list)
     for record in records:
         grouped[record["case"], record["method"]].append(record)
@@ -172,9 +180,10 @@ def main(source, output):
                 for run in applicable
             )
             low, high = wilson_interval(hits, len(applicable))
-            success_lines.append(
-                f"| {case_id} | {method} | {target} | {hits}/{len(applicable)} | {low:.1%}–{high:.1%} |"
+            interval = (
+                "overlapping batch streams" if method.startswith("cpp") and legacy_cpp else f"{low:.1%}–{high:.1%}"
             )
+            success_lines.append(f"| {case_id} | {method} | {target} | {hits}/{len(applicable)} | {interval} |")
         (output / "SUCCESS_RATES.md").write_text("\n".join(success_lines) + "\n")
     lines += [
         "",
@@ -207,20 +216,64 @@ def main(source, output):
         "",
         "## Limits and follow-up",
         "",
-        "* Native and NumPy RIS use short observation batches with cached bases. The trial kernels are unchanged, "
-        "but batch-specific random streams differ from one long public-API call.",
-        "* QDistEvol runs independent populations of 100 candidates, with ten offspring per retained parent. "
-        "Repeated-seed and longer-budget measurements are needed before judging evolutionary guidance.",
-        "* dist-m4ri exports its witness file at exit. An export observed after the deadline is retained as "
-        "best_returned but conservatively receives no in-budget credit. This especially affects full-budget runs "
-        "without an early-stop target. No late result is silently discarded.",
         "* This pilot scores search-stage latency. The raw records separate common preparation, dispatch/search, "
         "validation and saving; they do not assert an end-to-end production gate speedup.",
-        "* Fresh cases have no preselected witness targets. Use an independent reference phase to freeze those "
-        "targets before held-out seed comparisons. Do not tune and evaluate on the same seeds.",
-        "* Repeat on the intended CI CPU with fixed physical-core affinity before selecting a production default.",
-        "",
     ]
+    if any(method.startswith("cpp") or method == "numpy" for method in methods):
+        lines.append(
+            "* The original C++ and NumPy adapters use unchanged trial kernels with cached bases, "
+            "but reseed each observation batch; streams differ from one long public-API call."
+        )
+        if legacy_cpp and any(method.startswith("cpp") for method in methods):
+            lines.insert(
+                4,
+                "The legacy C++ adapter reuses overlapping batch-seed streams across adjacent study seeds. "
+                "Its repeated-run counts are correlated; no independent-seed intervals are reported for it.\n",
+            )
+        elif any(method.startswith("cpp") for method in methods):
+            lines.append(
+                "* C++ observation batches use a BLAKE2b-derived seed for each (study seed, batch index) pair, "
+                "avoiding the old additive mapping's systematic overlap between adjacent study seeds."
+            )
+    if any(method.startswith("ris") for method in methods):
+        lines.append(
+            "* The standalone RIS engine retains native workers and RNG state across batches. "
+            "It has different elimination kernels. Equal-time runs against the original adapter therefore "
+            "do not visit identical random trials, even with the same initial seed."
+        )
+    if "qdistevol" in methods:
+        lines.append(
+            "* QDistEvol runs independent populations of 100 candidates, with ten offspring per retained parent. "
+            "Repeated-seed and longer-budget measurements are needed before judging evolutionary guidance."
+        )
+    if "m4ri" in methods:
+        lines.append(
+            "* dist-m4ri exports its witness file at exit. Late exports are retained as best_returned but "
+            "receive no in-budget credit. This especially affects runs without early stopping."
+        )
+        if "m4ri_export_reserve_seconds" in environment:
+            lines.append(
+                f"* The unmodified dist-m4ri CLI reserves {environment['m4ri_export_reserve_seconds']:g} "
+                "seconds per side for process startup and witness export, deducted from its native timeout. "
+                "Witness arrival is measured at exit; earlier internal discovery times are unavailable."
+            )
+    if "ris-incremental" in methods:
+        lines.append(
+            "* Incremental RIS scores correlated bases between independent random-permutation restarts. "
+            "Its trial counter counts scored bases, not independent information sets. Raw records include "
+            "full reductions, exchange proposals, and accepted exchanges."
+        )
+    if any(code_target(cases[case_id]) is None for case_id in selected):
+        lines.append(
+            "* Some selected cases have no frozen targets. Establish independent references before "
+            "held-out seed comparisons; do not tune and evaluate on the same seeds."
+        )
+    else:
+        lines.append(
+            "* Targets come from the supplied frozen corpus. Validated witnesses are upper bounds, "
+            "and paper/analytic targets remain distinguishable in the raw records."
+        )
+    lines += ["* Repeat on the intended deployment CPU before selecting a production default.", ""]
     (output / "REPORT.md").write_text("\n".join(lines))
     print(f"Exported {len(records)} validated runs to {output}")
 

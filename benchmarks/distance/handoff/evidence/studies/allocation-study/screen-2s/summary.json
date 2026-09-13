@@ -1,0 +1,1775 @@
+{
+  "cells": [
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "weights": [
+        77,
+        78,
+        77
+      ],
+      "median": 77,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "dispatch",
+      "weights": [
+        28,
+        28,
+        28
+      ],
+      "median": 28,
+      "routed_only": [
+        28,
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "race",
+      "weights": [
+        28,
+        28,
+        28
+      ],
+      "median": 28,
+      "routed_only": [
+        28,
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "method": "guided",
+      "weights": [
+        75,
+        76,
+        77
+      ],
+      "median": 76,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "method": "dispatch",
+      "weights": [
+        28,
+        28,
+        28
+      ],
+      "median": 28,
+      "routed_only": [
+        28,
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "method": "race",
+      "weights": [
+        28,
+        28,
+        28
+      ],
+      "median": 28,
+      "routed_only": [
+        28,
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "method": "guided",
+      "weights": [
+        75,
+        76,
+        77
+      ],
+      "median": 76,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "method": "dispatch",
+      "weights": [
+        75,
+        76,
+        77
+      ],
+      "median": 76,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "method": "race",
+      "weights": [
+        75,
+        76,
+        77
+      ],
+      "median": 76,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "weights": [
+        84,
+        84,
+        85
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "dispatch",
+      "weights": [
+        85,
+        87,
+        82
+      ],
+      "median": 85,
+      "routed_only": [
+        85,
+        87,
+        82
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "race",
+      "weights": [
+        84,
+        84,
+        85
+      ],
+      "median": 84,
+      "routed_only": [
+        88,
+        88,
+        88
+      ]
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "method": "guided",
+      "weights": [
+        87,
+        83,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "method": "dispatch",
+      "weights": [
+        85,
+        87,
+        82
+      ],
+      "median": 85,
+      "routed_only": [
+        85,
+        87,
+        82
+      ]
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "method": "race",
+      "weights": [
+        87,
+        83,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        88,
+        88,
+        86
+      ]
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "method": "guided",
+      "weights": [
+        87,
+        83,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "method": "dispatch",
+      "weights": [
+        87,
+        83,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "method": "race",
+      "weights": [
+        87,
+        83,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "weights": [
+        80,
+        84,
+        86
+      ],
+      "median": 84,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "dispatch",
+      "weights": [
+        48,
+        48,
+        48
+      ],
+      "median": 48,
+      "routed_only": [
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "race",
+      "weights": [
+        48,
+        48,
+        48
+      ],
+      "median": 48,
+      "routed_only": [
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "case": "regression-690-182-columns",
+      "method": "guided",
+      "weights": [
+        83,
+        86,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "regression-690-182-columns",
+      "method": "dispatch",
+      "weights": [
+        48,
+        48,
+        48
+      ],
+      "median": 48,
+      "routed_only": [
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "case": "regression-690-182-columns",
+      "method": "race",
+      "weights": [
+        48,
+        48,
+        48
+      ],
+      "median": 48,
+      "routed_only": [
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "method": "guided",
+      "weights": [
+        83,
+        86,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "method": "dispatch",
+      "weights": [
+        83,
+        86,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "method": "race",
+      "weights": [
+        83,
+        86,
+        83
+      ],
+      "median": 83,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "guided",
+      "weights": [
+        31,
+        30,
+        29
+      ],
+      "median": 30,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "dispatch",
+      "weights": [
+        31,
+        30,
+        29
+      ],
+      "median": 30,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "tanner-432_8_33",
+      "method": "race",
+      "weights": [
+        31,
+        30,
+        29
+      ],
+      "median": 30,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "guided",
+      "weights": [
+        26,
+        26,
+        28
+      ],
+      "median": 26,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "dispatch",
+      "weights": [
+        26,
+        26,
+        28
+      ],
+      "median": 26,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "mitten-975-195",
+      "method": "race",
+      "weights": [
+        26,
+        26,
+        28
+      ],
+      "median": 26,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "toric-1000",
+      "method": "guided",
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "toric-1000",
+      "method": "dispatch",
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "toric-1000",
+      "method": "race",
+      "weights": [
+        20,
+        20,
+        20
+      ],
+      "median": 20,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "guided",
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "dispatch",
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "case": "fresh-bb-960",
+      "method": "race",
+      "weights": [
+        60,
+        60,
+        60
+      ],
+      "median": 60,
+      "routed_only": [
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "paired": [
+    {
+      "control": "guided",
+      "lower": 12,
+      "equal": 27,
+      "higher": 0
+    },
+    {
+      "control": "dispatch",
+      "lower": 3,
+      "equal": 33,
+      "higher": 3
+    }
+  ],
+  "allocation": [
+    {
+      "case": "board-700-222-28",
+      "seed": 1500,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.25179278885480016,
+        "route": 0.7159520511049777
+      }
+    },
+    {
+      "case": "board-700-222-28",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.2502786199329421,
+        "route": 0.7107280330965295
+      }
+    },
+    {
+      "case": "board-700-222-28",
+      "seed": 1501,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.2517854879843071,
+        "route": 0.715693645994179
+      }
+    },
+    {
+      "case": "board-700-222-28",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.2496975688263774,
+        "route": 0.7102157642366365
+      }
+    },
+    {
+      "case": "board-700-222-28",
+      "seed": 1502,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.25109608203638345,
+        "route": 0.7159269280964509
+      }
+    },
+    {
+      "case": "board-700-222-28",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.25015997025184333,
+        "route": 0.7102604211540893
+      }
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "seed": 1500,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.24886274128220975,
+        "route": 0.7072356970747933
+      }
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.25053493003360927,
+        "route": 0.7140076131327078
+      }
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "seed": 1501,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.25144773395732045,
+        "route": 0.7156974690733477
+      }
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.25052519293967634,
+        "route": 0.7122753369621933
+      }
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "seed": 1502,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.25164387200493366,
+        "route": 0.7168023239355534
+      }
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.25046447094064206,
+        "route": 0.7126344300340861
+      }
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "seed": 1500,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "seed": 1501,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "seed": 1502,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1500,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.7169754928909242,
+        "route": 0.25985053600743413
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.7163821530994028,
+        "route": 0.2608014600118622
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1501,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.7190955400001258,
+        "route": 0.2578077540965751
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.7161934280302376,
+        "route": 0.2611125790281221
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1502,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.718448776868172,
+        "route": 0.2567667650291696
+      }
+    },
+    {
+      "case": "board-682-172-79",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.7154157250188291,
+        "route": 0.2617405940545723
+      }
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "seed": 1500,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.7108253159094602,
+        "route": 0.2649084918666631
+      }
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.7134228290524334,
+        "route": 0.2615531472256407
+      }
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "seed": 1501,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.716255837935023,
+        "route": 0.2572541340487078
+      }
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.7105804820312187,
+        "route": 0.2632392270024866
+      }
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "seed": 1502,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.7165406179847196,
+        "route": 0.25630976108368486
+      }
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 4,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.712877508951351,
+        "route": 0.25982089899480343
+      }
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "seed": 1500,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "seed": 1501,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "seed": 1502,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1500,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 3
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.246531696873717,
+        "route": 0.7377808799501508
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 3
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.247969388961792,
+        "route": 0.7372043759096414
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1501,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 3
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.2472885970491916,
+        "route": 0.7401113170199096
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 3
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.24747923586983234,
+        "route": 0.7391256910050288
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1502,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 3
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.2468472778564319,
+        "route": 0.737339457962662
+      }
+    },
+    {
+      "case": "regression-690-182",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 3
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.2475548490183428,
+        "route": 0.7398276160238311
+      }
+    },
+    {
+      "case": "regression-690-182-columns",
+      "seed": 1500,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 3
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.24784848501440138,
+        "route": 0.7347880961606279
+      }
+    },
+    {
+      "case": "regression-690-182-columns",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 3
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.24749462702311575,
+        "route": 0.7356812709476799
+      }
+    },
+    {
+      "case": "regression-690-182-columns",
+      "seed": 1501,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 3
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.24761310685425997,
+        "route": 0.7337413559434935
+      }
+    },
+    {
+      "case": "regression-690-182-columns",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 4
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.24796703504398465,
+        "route": 0.72504029085394
+      }
+    },
+    {
+      "case": "regression-690-182-columns",
+      "seed": 1502,
+      "side": "X",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 3
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.24732822610531002,
+        "route": 0.7381137720076367
+      }
+    },
+    {
+      "case": "regression-690-182-columns",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "competing_sessions",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 3
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0.24787187098991126,
+        "route": 0.7370659119915217
+      }
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "seed": 1500,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "seed": 1501,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "seed": 1502,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1500,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1501,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1502,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "tanner-432_8_33",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1500,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1501,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1502,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "mitten-975-195",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1500,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1501,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1502,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "toric-1000",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1500,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1500,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1501,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1501,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1502,
+      "side": "X",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    },
+    {
+      "case": "fresh-bb-960",
+      "seed": 1502,
+      "side": "Z",
+      "decision": "no_partition",
+      "preferred_counts": {
+        "guided": 0,
+        "route": 0
+      },
+      "switches": 0,
+      "active_seconds": {
+        "guided": 0,
+        "route": 0
+      }
+    }
+  ]
+}

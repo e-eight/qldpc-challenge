@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "configurations": 57,
+  "saved_witness_documents": 61658,
+  "source_binary_archive_checks_passed": true,
+  "initialization_across_main_and_finite": [
+    {
+      "case": "684-10-101",
+      "side": "X",
+      "workers_compared": 19,
+      "best": 136,
+      "signature_sha256": "884b8f3ddfbb215b4b177fe88b3fb4d38f58ca003ffd8a6f8304f7ed1d04da35"
+    },
+    {
+      "case": "684-10-101",
+      "side": "Z",
+      "workers_compared": 19,
+      "best": 120,
+      "signature_sha256": "d91b8f93358b6821d7aa038ab3c8f346acff28e461ed3785a01b7c958b91aefc"
+    },
+    {
+      "case": "684-12-73",
+      "side": "X",
+      "workers_compared": 1,
+      "best": 72,
+      "signature_sha256": "46958a26e8403a6d3a90a203674648f97c4a585f249a0fb386f656af6c71337a"
+    },
+    {
+      "case": "684-12-73",
+      "side": "Z",
+      "workers_compared": 1,
+      "best": 108,
+      "signature_sha256": "914bce5ff1e941ec2ad01ce9d8e465991aaedd0b544df599a4d860cd8057ebdf"
+    },
+    {
+      "case": "684-8-85",
+      "side": "X",
+      "workers_compared": 1,
+      "best": 126,
+      "signature_sha256": "d1c45a60da62529263795ab360e9d637c6175422dc172bad96ec14d4f2de5f4c"
+    },
+    {
+      "case": "684-8-85",
+      "side": "Z",
+      "workers_compared": 1,
+      "best": 63,
+      "signature_sha256": "b523975df495f6551bacade78b288238047eb20bc29fc23b881e51d1917915db"
+    },
+    {
+      "case": "700-140-22",
+      "side": "X",
+      "workers_compared": 18,
+      "best": 26,
+      "signature_sha256": "17bdf79541bfd9d18bb13c163b2921f5f6a4b160d2f43eb68bb73b535ddc7d49"
+    },
+    {
+      "case": "700-140-22",
+      "side": "Z",
+      "workers_compared": 18,
+      "best": 34,
+      "signature_sha256": "03de9812660bb307a2cdfb85557190e3605de61b503aaa21b723b6a9bb0e476f"
+    },
+    {
+      "case": "700-6-32",
+      "side": "X",
+      "workers_compared": 18,
+      "best": 150,
+      "signature_sha256": "4e432645946e30ca90f5b998c544d7ba1c501f53af8504569a28450a9217db2e"
+    },
+    {
+      "case": "700-6-32",
+      "side": "Z",
+      "workers_compared": 18,
+      "best": 96,
+      "signature_sha256": "b7db79347cea72813a264993ec54a32f5030cb6e2068f3e929c67dce24175f8d"
+    }
+  ],
+  "markdown_links_resolve": true,
+  "clock_alignment_supplement": "confirmation-20s/clock-origin-audit.json",
+  "unit_tests": 46,
+  "scope": "Witness evidence audits; no full candidate promotion gate or full-code distance certificate"
+}

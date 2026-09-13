@@ -1,0 +1,1001 @@
+{
+  "cells": [
+    {
+      "case": "board-700-222-28",
+      "method": "incremental",
+      "weights": [
+        72,
+        71
+      ],
+      "median": 71.5,
+      "initial": [
+        89,
+        89
+      ],
+      "candidate_weights": [
+        null,
+        null
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "weights": [
+        72,
+        70
+      ],
+      "median": 71.0,
+      "initial": [
+        89,
+        89
+      ],
+      "candidate_weights": [
+        null,
+        null
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "circulant",
+      "weights": [
+        72,
+        70
+      ],
+      "median": 71.0,
+      "initial": [
+        89,
+        89
+      ],
+      "candidate_weights": [
+        null,
+        null
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "matrix-structure",
+      "weights": [
+        28,
+        28
+      ],
+      "median": 28.0,
+      "initial": [
+        89,
+        89
+      ],
+      "candidate_weights": [
+        28,
+        28
+      ],
+      "candidate_improved_initial": 2,
+      "target_hits": 2
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "reduced-space",
+      "weights": [
+        28,
+        28
+      ],
+      "median": 28.0,
+      "initial": [
+        89,
+        89
+      ],
+      "candidate_weights": [
+        28,
+        28
+      ],
+      "candidate_improved_initial": 2,
+      "target_hits": 2
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "decoder",
+      "weights": [
+        89,
+        89
+      ],
+      "median": 89.0,
+      "initial": [
+        89,
+        89
+      ],
+      "candidate_weights": [
+        90,
+        90
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "incremental",
+      "weights": [
+        81,
+        74
+      ],
+      "median": 77.5,
+      "initial": [
+        96,
+        96
+      ],
+      "candidate_weights": [
+        null,
+        null
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "weights": [
+        79,
+        82
+      ],
+      "median": 80.5,
+      "initial": [
+        96,
+        96
+      ],
+      "candidate_weights": [
+        null,
+        null
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "circulant",
+      "weights": [
+        76,
+        76
+      ],
+      "median": 76.0,
+      "initial": [
+        96,
+        96
+      ],
+      "candidate_weights": [
+        null,
+        null
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "matrix-structure",
+      "weights": [
+        79,
+        82
+      ],
+      "median": 80.5,
+      "initial": [
+        96,
+        96
+      ],
+      "candidate_weights": [
+        96,
+        96
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "reduced-space",
+      "weights": [
+        76,
+        78
+      ],
+      "median": 77.0,
+      "initial": [
+        96,
+        96
+      ],
+      "candidate_weights": [
+        76,
+        78
+      ],
+      "candidate_improved_initial": 2,
+      "target_hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "decoder",
+      "weights": [
+        96,
+        96
+      ],
+      "median": 96.0,
+      "initial": [
+        96,
+        96
+      ],
+      "candidate_weights": [
+        101,
+        105
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "incremental",
+      "weights": [
+        80,
+        80
+      ],
+      "median": 80.0,
+      "initial": [
+        93,
+        93
+      ],
+      "candidate_weights": [
+        null,
+        null
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "weights": [
+        80,
+        81
+      ],
+      "median": 80.5,
+      "initial": [
+        93,
+        93
+      ],
+      "candidate_weights": [
+        null,
+        null
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "circulant",
+      "weights": [
+        48,
+        48
+      ],
+      "median": 48.0,
+      "initial": [
+        93,
+        93
+      ],
+      "candidate_weights": [
+        null,
+        null
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "matrix-structure",
+      "weights": [
+        80,
+        81
+      ],
+      "median": 80.5,
+      "initial": [
+        93,
+        93
+      ],
+      "candidate_weights": [
+        93,
+        93
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "reduced-space",
+      "weights": [
+        56,
+        56
+      ],
+      "median": 56.0,
+      "initial": [
+        93,
+        93
+      ],
+      "candidate_weights": [
+        56,
+        56
+      ],
+      "candidate_improved_initial": 2,
+      "target_hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "decoder",
+      "weights": [
+        93,
+        93
+      ],
+      "median": 93.0,
+      "initial": [
+        93,
+        93
+      ],
+      "candidate_weights": [
+        102,
+        105
+      ],
+      "candidate_improved_initial": 0,
+      "target_hits": 0
+    }
+  ],
+  "paired": [
+    {
+      "method": "incremental",
+      "lower": 2,
+      "equal": 2,
+      "higher": 2
+    },
+    {
+      "method": "circulant",
+      "lower": 4,
+      "equal": 2,
+      "higher": 0
+    },
+    {
+      "method": "matrix-structure",
+      "lower": 2,
+      "equal": 4,
+      "higher": 0
+    },
+    {
+      "method": "reduced-space",
+      "lower": 6,
+      "equal": 0,
+      "higher": 0
+    },
+    {
+      "method": "decoder",
+      "lower": 0,
+      "equal": 0,
+      "higher": 6
+    }
+  ],
+  "stages": [
+    {
+      "case": "board-700-222-28",
+      "method": "incremental",
+      "stage": "incremental",
+      "weights": [
+        72,
+        71
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "incremental",
+      "stage": "initial_seed",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "incremental",
+      "stage": "initialization",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "stage": "guided",
+      "weights": [
+        72,
+        70
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "stage": "initial_seed",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "stage": "initialization",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "circulant",
+      "stage": "guided",
+      "weights": [
+        72,
+        70
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "circulant",
+      "stage": "initial_seed",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "circulant",
+      "stage": "initialization",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "matrix-structure",
+      "stage": "guided",
+      "weights": [
+        75,
+        70
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "matrix-structure",
+      "stage": "initial_seed",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "matrix-structure",
+      "stage": "initialization",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "matrix-structure",
+      "stage": "orbit_opposite_adjacent_rows",
+      "weights": [
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "matrix-structure",
+      "stage": "orbit_own_adjacent_rows",
+      "weights": [
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "reduced-space",
+      "stage": "initial_seed",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "reduced-space",
+      "stage": "initialization",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "reduced-space",
+      "stage": "reduced_both",
+      "weights": [
+        122,
+        122
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "reduced-space",
+      "stage": "reduced_single_left",
+      "weights": [
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "reduced-space",
+      "stage": "reduced_single_right",
+      "weights": [
+        28,
+        28
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "decoder",
+      "stage": "decoder",
+      "weights": [
+        90,
+        90
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "decoder",
+      "stage": "initial_seed",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "decoder",
+      "stage": "initialization",
+      "weights": [
+        89,
+        89
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "incremental",
+      "stage": "incremental",
+      "weights": [
+        81,
+        74
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "incremental",
+      "stage": "initial_seed",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "incremental",
+      "stage": "initialization",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "stage": "guided",
+      "weights": [
+        79,
+        82
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "stage": "initial_seed",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "stage": "initialization",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "circulant",
+      "stage": "circulant",
+      "weights": [
+        76,
+        76
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "circulant",
+      "stage": "initial_seed",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "circulant",
+      "stage": "initialization",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "matrix-structure",
+      "stage": "guided",
+      "weights": [
+        79,
+        82
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "matrix-structure",
+      "stage": "initial_seed",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "matrix-structure",
+      "stage": "initialization",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "matrix-structure",
+      "stage": "sector_transfer",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "reduced-space",
+      "stage": "initial_seed",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "reduced-space",
+      "stage": "initialization",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "reduced-space",
+      "stage": "reduced_both",
+      "weights": [
+        122,
+        120
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "reduced-space",
+      "stage": "reduced_single_left",
+      "weights": [
+        76,
+        84
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "reduced-space",
+      "stage": "reduced_single_right",
+      "weights": [
+        84,
+        78
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "decoder",
+      "stage": "decoder",
+      "weights": [
+        101,
+        105
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "decoder",
+      "stage": "initial_seed",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "decoder",
+      "stage": "initialization",
+      "weights": [
+        96,
+        96
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "incremental",
+      "stage": "incremental",
+      "weights": [
+        80,
+        80
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "incremental",
+      "stage": "initial_seed",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "incremental",
+      "stage": "initialization",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "stage": "guided",
+      "weights": [
+        80,
+        81
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "stage": "initial_seed",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "stage": "initialization",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "circulant",
+      "stage": "circulant",
+      "weights": [
+        48,
+        48
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "circulant",
+      "stage": "initial_seed",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "circulant",
+      "stage": "initialization",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "matrix-structure",
+      "stage": "guided",
+      "weights": [
+        80,
+        81
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "matrix-structure",
+      "stage": "initial_seed",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "matrix-structure",
+      "stage": "initialization",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "matrix-structure",
+      "stage": "sector_transfer",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "reduced-space",
+      "stage": "initial_seed",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "reduced-space",
+      "stage": "initialization",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "reduced-space",
+      "stage": "reduced_both",
+      "weights": [
+        121,
+        123
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "reduced-space",
+      "stage": "reduced_single_left",
+      "weights": [
+        56,
+        56
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "reduced-space",
+      "stage": "reduced_single_right",
+      "weights": [
+        56,
+        56
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "decoder",
+      "stage": "decoder",
+      "weights": [
+        102,
+        105
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "decoder",
+      "stage": "initial_seed",
+      "weights": [
+        93,
+        93
+      ]
+    },
+    {
+      "case": "regression-690-182",
+      "method": "decoder",
+      "stage": "initialization",
+      "weights": [
+        93,
+        93
+      ]
+    }
+  ],
+  "timing": [
+    {
+      "method": "incremental",
+      "cpu_seconds": 359.89459760800025,
+      "elapsed_seconds": 360.0397458431544,
+      "late_exports": 0,
+      "median_fallback_seconds": 0.0
+    },
+    {
+      "method": "guided",
+      "cpu_seconds": 359.9165338869997,
+      "elapsed_seconds": 360.09964704769664,
+      "late_exports": 0,
+      "median_fallback_seconds": 0.0
+    },
+    {
+      "method": "circulant",
+      "cpu_seconds": 359.8937651149998,
+      "elapsed_seconds": 360.0601174691692,
+      "late_exports": 8,
+      "median_fallback_seconds": 0.0
+    },
+    {
+      "method": "matrix-structure",
+      "cpu_seconds": 359.9256878210002,
+      "elapsed_seconds": 360.03501779725775,
+      "late_exports": 0,
+      "median_fallback_seconds": 29.350557974423282
+    },
+    {
+      "method": "reduced-space",
+      "cpu_seconds": 359.910537947,
+      "elapsed_seconds": 360.0181470438838,
+      "late_exports": 0,
+      "median_fallback_seconds": 0.0
+    },
+    {
+      "method": "decoder",
+      "cpu_seconds": 432.823898058,
+      "elapsed_seconds": 432.97625554702245,
+      "late_exports": 12,
+      "median_fallback_seconds": 0.0
+    }
+  ],
+  "saved_candidates": 7274
+}

@@ -1,0 +1,20 @@
+{
+  "cells": [
+    {
+      "case": "684-12-73",
+      "method": "exact-components",
+      "target": 51,
+      "weights": [
+        51
+      ]
+    },
+    {
+      "case": "684-8-85",
+      "method": "exact-components",
+      "target": 54,
+      "weights": [
+        54
+      ]
+    }
+  ]
+}

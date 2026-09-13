@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "reviewed_configurations": 960,
+  "exported_witness_events": 37131,
+  "saved_reviewed_candidates": 37131,
+  "original_measured_configurations": 960,
+  "corrected_control_configurations": 120,
+  "raw_records_match": true,
+  "candidate_counts_match": true,
+  "matrix_bytes_match": true,
+  "native_binary_hashes_match": true,
+  "side_summaries_recomputed": true,
+  "python_tests": 56,
+  "cpp_release": "passed",
+  "cpp_asan_ubsan": "passed",
+  "portable_wheel_and_extracted_source": "passed",
+  "trusted_integrity_files": 27
+}

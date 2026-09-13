@@ -1,0 +1,100 @@
+{
+  "cells": [
+    {
+      "case": "684-12-73-permuted",
+      "method": "guided",
+      "target": 51,
+      "weights": [
+        86
+      ]
+    },
+    {
+      "case": "684-12-73-permuted",
+      "method": "auto-components",
+      "target": 51,
+      "weights": [
+        86
+      ]
+    },
+    {
+      "case": "684-8-85-permuted",
+      "method": "guided",
+      "target": 54,
+      "weights": [
+        83
+      ]
+    },
+    {
+      "case": "684-8-85-permuted",
+      "method": "auto-components",
+      "target": 54,
+      "weights": [
+        83
+      ]
+    },
+    {
+      "case": "682-182-76-permuted",
+      "method": "guided",
+      "target": 76,
+      "weights": [
+        86
+      ]
+    },
+    {
+      "case": "682-182-76-permuted",
+      "method": "auto-components",
+      "target": 76,
+      "weights": [
+        86
+      ]
+    },
+    {
+      "case": "700-140-22-permuted",
+      "method": "guided",
+      "target": 22,
+      "weights": [
+        22
+      ]
+    },
+    {
+      "case": "700-140-22-permuted",
+      "method": "auto-components",
+      "target": 22,
+      "weights": [
+        22
+      ]
+    },
+    {
+      "case": "664-170-18-permuted",
+      "method": "guided",
+      "target": 18,
+      "weights": [
+        18
+      ]
+    },
+    {
+      "case": "664-170-18-permuted",
+      "method": "auto-components",
+      "target": 18,
+      "weights": [
+        18
+      ]
+    },
+    {
+      "case": "676-4-13-permuted",
+      "method": "guided",
+      "target": 13,
+      "weights": [
+        13
+      ]
+    },
+    {
+      "case": "676-4-13-permuted",
+      "method": "auto-components",
+      "target": 13,
+      "weights": [
+        13
+      ]
+    }
+  ]
+}

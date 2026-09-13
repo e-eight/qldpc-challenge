@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-13",
+  "python_suites": {
+    "tests": 62,
+    "status": "passed",
+    "paths": [
+      "benchmarks/distance/test_ris_native.py",
+      "benchmarks/distance/strategy_prototypes/guided/test_guided.py",
+      "benchmarks/distance/full_suite/test_suite.py"
+    ]
+  },
+  "standalone_cmake_core": "passed",
+  "compact_evidence": {
+    "cases": 593,
+    "records": 7116,
+    "witness_checks": 17906,
+    "status": "passed"
+  },
+  "trusted_verifier": "27 pinned files unchanged",
+  "new_handoff_python_ruff": "passed",
+  "staged_python_syntax": "passed",
+  "new_binaries_caches_or_matrix_archives": false
+}

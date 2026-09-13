@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "grids": {
+    "screen-10s": {
+      "status": "passed",
+      "configurations": 126,
+      "saved_witness_documents_checked": 10791,
+      "audit_file": "screen-10s/audit-candidates.json",
+      "audit_sha256": "e8fca67f29a765913c49ff4d2d516cb7cdc888f47df7c2542f4d44354703ea87",
+      "live_measured_sources_and_binaries_rechecked": true
+    },
+    "relabel-10s": {
+      "status": "passed",
+      "configurations": 36,
+      "saved_witness_documents_checked": 2066,
+      "audit_file": "relabel-10s/audit-candidates.json",
+      "audit_sha256": "88683969e61d410f29a9a196f42a0942abdce84ed158ee449cc1f434d15a3f78",
+      "live_measured_sources_and_binaries_rechecked": true
+    },
+    "hard-60s": {
+      "status": "passed",
+      "configurations": 36,
+      "saved_witness_documents_checked": 7274,
+      "audit_file": "hard-60s/audit-candidates.json",
+      "audit_sha256": "05788c484ac8b63e817976777fb9a860f0621ad07d1f5740c1cc650c8ad8901b",
+      "live_measured_sources_and_binaries_rechecked": true
+    },
+    "route-2s": {
+      "status": "passed",
+      "configurations": 18,
+      "saved_witness_documents_checked": 1132,
+      "audit_file": "route-2s/audit-route.json",
+      "audit_sha256": "c357178d855e926accf9e46763c047520d354c686982cd4ea6658f1f2300f682",
+      "live_measured_sources_and_binaries_rechecked": true
+    }
+  },
+  "total_configurations": 216,
+  "total_saved_witness_documents": 21263,
+  "unit_tests": {
+    "passed": 33,
+    "log": "tests.txt",
+    "sha256": "a9ee7199de9d086d8c8fa63e8bcf573178f8bbc29436c068000f11c56d087c9f"
+  },
+  "ruff": {
+    "passed": true,
+    "log": "lint.txt",
+    "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+  },
+  "trusted_validator_integrity": {
+    "passed": true,
+    "pinned_files": 27,
+    "sources_unchanged_since_check": true
+  },
+  "main_sources_and_binaries_identical_across_grids": true,
+  "common_initialization_identical_across_budgets": true,
+  "scope": "Experimental witnessed upper bounds; no exact-distance certificate or full submission gate."
+}

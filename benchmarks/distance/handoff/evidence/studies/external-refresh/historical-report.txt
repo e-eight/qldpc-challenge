@@ -1,0 +1,155 @@
+# Refreshed native/external distance-search comparison
+
+The native implementations remain competitive with both external tools at matched
+budgets. Across 42 case/seed/budget comparisons, guided returns a lower weight
+than dist-m4ri in **25**, ties **17**, and loses **none**. Against QDistEvol it wins
+**29**, ties **13**, and loses **none**. These are descriptive outcomes on seven
+fixed cases and three seeds per budget, not a general dominance claim.
+
+Guided is not uniformly better than incremental: it wins **11**, ties **24**, and
+loses **7**. Keep both native strategies as candidates. Dist-m4ri remains a useful
+external control, including a matching Tanner median at 60 seconds.
+
+## Median delivered upper bounds
+
+Each cell is **10 seconds → 60 seconds/code**, split equally between X and Z.
+Lower is better. Budgets use independent seeds, so these are not trajectory
+prefixes and medians need not improve monotonically.
+
+| Code | Reference target | Incremental | Guided | dist-m4ri | QDistEvol |
+|---|---:|---:|---:|---:|---:|
+| Board700 | 28 | 73 → 73 | 75 → 73 | 79 → 77 | 84 → 82 |
+| Board682 | 72 | 83 → 80 | 81 → 80 | 88 → 84 | 94 → 91 |
+| Regression690 | 28 | 82 → 80 | 84 → 80 | 87 → 84 | 92 → 92 |
+| Tanner432 | 32 | 32 → 30 | 29 → 29 | 36 → 29 | 35 → 31 |
+| Mitten975 | 24 | 24 → 24 | 24 → 24 | 24 → 26 | 70 → 44 |
+| Toric1000 | 20 | 20 → 20 | 20 → 20 | 20 → 20 | 20 → 20 |
+| Bicycle960 | 60 | 60 → 60 | 60 → 60 | 60 → 60 | 60 → 60 |
+
+Tanner's evaluation target is the stored weight-32 witness, rather than the 33
+in its case name.
+
+The strongest relative native advantage is on the hard board/regression cases.
+At 60 seconds both native medians are four weight units below dist-m4ri on each
+of these three cases, and nine to twelve below QDistEvol. However, all methods
+remain far from the weight-28 targets on Board700 and Regression690. The best
+individual native witnesses in this screen are 68 and 77 respectively; no method
+hits any of the three hard-case targets at either budget.
+
+On Tanner, dist-m4ri's 60-second values are 29, 34, 29; guided's are 29, 29, 29.
+The equal median does not imply equal recovery reliability. On Mitten, the
+short-budget dist-m4ri values are 24, 26, 24; the independent longer-budget seeds
+produce 30, 26, 24. That small-sample reversal is not evidence that longer search
+hurts. QDistEvol's longer Mitten values are 40, 62, 44: it benefits from time but
+still trails both native methods' three 24s.
+
+## Initialization and sector results
+
+Common initialization already gives Toric1000 weight 20 and Bicycle960 X weight
+60. None of the searches improves those code-level bounds. Therefore their ties
+are practical outcomes of the shared wrapper, not evidence of equal independent
+search effectiveness.
+
+The bicycle Z-sector medians illustrate the hidden difference:
+
+| Method | 10 seconds/code | 60 seconds/code |
+|---|---:|---:|
+| Incremental | 154 | 142 |
+| Guided | 124 | 126 |
+| dist-m4ri | 164 | 158 |
+| QDistEvol | 174 | 164 |
+
+All start from the same Z-sector initialization bound of 180. The stronger
+existing Z reference support of weight 152 is retained in the manifest, and is
+never supplied to search. The code-level target is 60. The previously identified
+X/Z symmetry transfer is outside this general-search experiment; these Z-sector
+search gains do not improve the code-level bound.
+
+## Matched protocol and scope
+
+The [frozen plan](../../strategy_prototypes/EXTERNAL_PLAN.md) defines 168
+configurations: seven existing cases, four methods and three fresh seeds at each
+budget. [The 10-second report](t1-10s/REPORT.md) uses seeds 1000--1002;
+[the 60-second report](t1-60s/REPORT.md) uses 1010--1012. Each report includes
+per-seed X/Z values, target hits, paired outcomes and resource accounting.
+
+Runs are serial on CPU0 of the same AMD EPYC 9554P VM, with method order shuffled
+within each case/seed. Numerical libraries and Numba use one thread. Preparation,
+identical logical initialization, session setup and delivered witnesses count
+against the budget. Reference witnesses never enter search; there is no target
+stopping. Matrix loading, imports, synthetic-toy JIT warmup, and independent
+validation are outside the deadline. Validation completes before the next timed
+search. Small read-only analysis jobs use CPU7 during measurement. The VM's vCPU
+assignment does not establish exclusive ownership of a host physical core.
+
+The native kernels and guided policy are unchanged. QDistEvol uses the pinned
+upstream algorithm with its existing population and mutation settings, allowing
+10,000 generations. Its observer passes scored results back unchanged and stops
+after a scored basis reaches the deadline. dist-m4ri uses its unchanged CLI,
+method 1, one thread and no target stopping, with 50 ms reserved for exit-time
+witness delivery. All exported ties are retained. Native batches target 2 ms.
+The common starting bound is retained by the wrapper; it is not injected into
+any engine's internal incumbent or fitness.
+
+Sources are pinned to codedistance `a4afe9c09bbf5790da9ecc05b65c5b62343979ad` and
+dist-m4ri `538d119f6e98b3782415eb78f7ce322a076f8101`. The latter is built with
+`-O3 -march=native`, static M4RI and no OpenMP, as recorded in its archived build
+provenance. The comparison concerns these implementations and settings; no
+external parameter sweep was performed. Native bases, M4RI iterations and
+QDistEvol candidates are not equivalent units of work, so their counts are not
+reported as cross-method speedup factors. The older Apple-machine QDistEvol
+pilot is not mixed into these results.
+
+## Evidence and verification
+
+All **7,142** distinct-per-side/run exported supports were independently checked
+and saved through the research kit: 3,457 in the short sweep and 3,685 in the long
+sweep. The persistence audits match each saved document to its original emitted
+support. There are **zero late witness deliveries**. Final evaluations can finish
+slightly after a deadline, but only timely observations receive credit. Aggregate
+CPU/elapsed ratios are approximately 0.997--1.000, including M4RI child CPU time.
+Preparation plus common initialization takes roughly 22--24 ms/side at the median.
+
+- [Short persistence audit](t1-10s/audit.json) and
+  [short external-protocol audit](t1-10s/external-audit.json): passed.
+- [Long persistence audit](t1-60s/audit.json) and
+  [long external-protocol audit](t1-60s/external-audit.json): passed.
+- [Combined audit](combined-audit.json): 168 configurations, identical source and
+  binary hashes across budgets, identical complete initialization for all 14
+  case/sector pairs across methods, seeds and budgets.
+- Eight synthetic-input adapter tests passed; Ruff and the diff whitespace check
+  passed. The tests cover unchanged QDistEvol observation semantics, deadline
+  handling, retention of M4RI exports and valid witnesses from all four adapters.
+- [Trusted verifier integrity](validator-integrity.txt): all 27 pinned files match.
+- [Hardware](hardware.json), [installed packages](environment-freeze.txt), per-budget
+  source archives, executable hashes, raw logs, CLI commands/outputs and matrices
+  accompany the results. `SHA256SUMS.json` hashes this result tree.
+
+All weights are witnessed upper bounds. Three seeds support screening, not a
+reliable miss-probability estimate or an exact-distance claim. The only schema
+exemption is the existing size cap for the n>700 benchmark fixtures. No full
+candidate gate, leaderboard changes or publication workflow was run.
+
+Two source-archiving setup attempts stopped before corpus search because of a
+Makefile path mismatch. Their partial setup artifacts are retained under
+`setup-attempt-no-search/` and `setup-attempt-2-no-search/`; neither contains a
+measured search configuration. The corrected driver is archived with both grids.
+
+## Reproducing the run and reports
+
+With the pinned dependencies and native modules built, choose new output paths:
+
+```sh
+.venv-benchmark/bin/python benchmarks/distance/study_external.py \
+  --output /tmp/external-10s-replay
+.venv-benchmark/bin/python benchmarks/distance/study_external.py \
+  --output /tmp/external-60s-replay --seconds 60 --seed-start 1010
+.venv-benchmark/bin/python benchmarks/distance/report_external.py /tmp/external-10s-replay
+.venv-benchmark/bin/python benchmarks/distance/audit_external.py /tmp/external-10s-replay
+.venv-benchmark/bin/python benchmarks/distance/report_external.py /tmp/external-60s-replay
+.venv-benchmark/bin/python benchmarks/distance/audit_external.py /tmp/external-60s-replay
+```
+
+The driver refuses to overwrite an output directory. A witness-save failure is a
+hard error, with raw observations retained for recovery. Wall-clock runs need
+not reproduce identical final weights even with the same seeds.

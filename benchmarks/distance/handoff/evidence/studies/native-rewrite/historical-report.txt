@@ -1,0 +1,163 @@
+# Native RIS rewrite: first Linux results
+
+The six-pivot table-based kernel is a useful starting point for a standalone
+tool. On all 33 frozen inputs it produced exactly the same best weights and
+supports as the existing C++ search for identical seeds and trial counts. Its
+median speedup across that initial fixed-work sweep was **1.96x**, with gains on
+30 of 33 inputs. The three toric controls were 3-5% slower in that short sweep.
+
+The plain allocation-free rewrite was usually slightly slower than the old
+kernel. The improvement came from reducing repeated elimination work and fixing
+a costly compiler-generated table-index calculation, rather than from changing
+the random search distribution.
+
+## Repeated fixed-work measurements
+
+The table uses three seeds (101-103), 1,024 trials per side with one worker and
+4,096 total trials per side with four workers. Thus each worker gets 1,024 trials;
+within each comparison the baseline and rewrite receive identical work. Rates
+combine X and Z and are medians across seeds. Speedups are medians of paired
+baseline/rewrite times, so may differ slightly from ratios of median rates.
+
+| Input | Baseline, 1 worker trials/s | Rewrite, 1 worker trials/s | Speedup | Baseline, 4 workers trials/s | Rewrite, 4 workers trials/s | Speedup |
+|---|---:|---:|---:|---:|---:|---:|
+| Board n=700, k=222 | 1,302 | 3,049 | 2.38x | 4,990 | 11,207 | 2.26x |
+| Tanner n=432 | 5,137 | 11,617 | 2.24x | 19,106 | 37,302 | 1.95x |
+| Mitten n=975 | 1,002 | 2,014 | 1.98x | 4,066 | 7,644 | 1.89x |
+| Toric n=1000 | 3,649 | 3,542 | 0.96x | 12,975 | 13,262 | 1.03x |
+| Fresh bicycle n=960 | 947 | 2,517 | 2.62x | 3,688 | 8,978 | 2.45x |
+
+The rewrite's one-to-four-worker throughput ratios range from about 3.2x to 3.8x
+on these inputs. CPU/wall ratios are approximately 1.0 with one worker and
+3.4-3.9 with four. This supports the resource accounting; it is not a measurement
+of target-finding reliability or a guarantee of scaling on other hosts.
+
+These measurements exclude matrix preparation and independent witness
+validation/persistence. Dispatch and result conversion are included. Preparation
+is recorded separately and is also improved in this implementation; for example,
+the first repeated mitten X measurement took about 4.3 ms versus 40.1 ms for the
+baseline. That example is descriptive, not a general end-to-end speedup claim.
+
+## What changed
+
+The standalone C++17 core has no Python or verifier dependency. Its pybind11
+interface accepts binary NumPy matrices, releases the GIL, and retains prepared
+bases. Workers keep their RNGs, row pointers, weights, sort scratch, and witness
+buffers across batches. The native unit test intercepts allocation calls to
+enforce allocation-free trial execution.
+
+The fast variant chooses up to six pivots, normalizes that panel, constructs
+its 64 possible row XORs, and clears those columns in one pass through the other
+rows. It preserves the original pivot visitation order and candidate enumeration.
+All reduced single rows and pairs among the eight lightest rows remain in the
+search. There is no family-specific search or evolutionary guidance yet.
+
+The compiler already generates SIMD XORs and vector popcounts in the tuned
+build. In an intermediate blocked version, perf identified an expensive
+vectorized gather/reduction sequence for extracting only six scattered bits.
+An explicitly unrolled scalar index calculation and a parity-based pivot test
+removed that overhead. The intermediate profile and source snapshot are retained
+under `profiling/`; they describe the version before that fix, not the final
+kernel. Its sample percentages include preparation and validation outside the
+timed search.
+
+## Cache and memory
+
+For the 975-qubit mitten input, the shared kernel and logical bases occupy
+99,840 bytes. Each worker reserves 232,832 bytes of scratch and witness storage.
+The active reduction matrix is 74,880 bytes and its six-pivot table is 8,192
+bytes. These exceed the guest's 32 KiB L1 data cache but fit within its reported
+1 MiB L2. These are payload sizes, not measured peak RSS; they omit Python
+objects, allocator overhead, thread stacks, and temporary preparation storage.
+
+Reserving all strict worker improvements costs a further quadratic witness
+buffer as n increases. Only actual improvements are written during trials, but
+this storage policy should be revisited for substantially larger inputs.
+
+## Equal-time integration smoke test
+
+The ordinary timed runner also completed eight configurations: four cases, two
+methods, four workers, seed 104, two seconds per code split equally between X
+and Z. This checks integration, target stopping, delivery-time accounting, and
+witness persistence. It is one seed and does not establish reliability.
+
+| Input | Baseline best timely weight | Rewrite best timely weight |
+|---|---:|---:|
+| Tanner n=432 | 37 | 31 |
+| Mitten n=975 | 52 | 28 |
+| Toric n=1000 | 20 | 22 |
+| Fresh bicycle n=960 | 160 | 164 |
+
+Each method recovered one of the four frozen targets, on different cases. The
+rewrite found the lighter Tanner and mitten witnesses; the baseline did better
+on toric and the fresh bicycle input. The baseline reseeds its observation
+batches while the rewrite continues its RNG streams, so these runs visit
+different random trials. The Tanner weight-31 witness improves the supplied
+weight-32 reference but remains an independently checked upper-bound witness,
+not a full-gate-approved leaderboard find. See the [timed smoke report](timed-smoke/REPORT.md).
+
+## Evidence and limits
+
+- [Complete 33-case sweep](corpus/REPORT.md): 99 configurations, one worker,
+  seed 100, 256 trials per side, including the plain rewrite control.
+- [Repeated one-worker comparison](one-worker/REPORT.md): 30 configurations.
+- [Repeated four-worker comparison](four-workers/REPORT.md): 30 configurations.
+- [Hardware and build settings](hardware.json): AMD EPYC 9554P as exposed by KVM,
+  GCC 13.3, both extensions built with `-O3 -march=native`. The rewrite retains
+  debug symbols for profiling. The perf 6.8 binary works on this guest's 6.12
+  kernel when invoked directly.
+- Each result directory retains raw JSON records, every returned improving
+  support, and an exact source archive. The frozen matrix bytes and original
+  target manifest are in `matrices/`.
+
+The 159 fixed-work configurations all passed independent witness validation and
+exact best-support comparison. Every returned witness was packaged and saved
+through the research kit. These are benchmark upper bounds, not new leaderboard
+finds or exact-distance certificates. No production verifier or code submission
+was modified.
+
+Including the timed smoke test, the final implementation completed 167 reported
+configurations and saved 3,521 candidate documents. All four result sets record
+the same native binary hash. Earlier tuning runs and the intermediate profiling
+run are excluded from that count.
+
+The guest affinity masks were `[0]` and `[0,2,4,6]`, selecting distinct cache IDs
+in the exposed topology. A VM cannot guarantee exclusive underlying physical
+cores. Methods ran sequentially; no other benchmark method competed for these
+workers. The short all-corpus sweep has noticeable dispatch/scheduling sensitivity
+on small inputs, so the repeated larger-input measurements are more informative.
+
+This is an implementation-speed experiment on the current corpus. It does not
+establish missed-refutation rates, performance above 1,000 qubits, or superiority
+over dist-m4ri. A future equal-budget repeated-seed study should include that
+control. Toric inputs also motivate a sparse-aware elimination path before
+choosing a universal default.
+
+## Validation
+
+- 51 Python tests passed: native preparation against the trusted GF(2) routines,
+  identical-trial witnesses, batch continuity, worker lifetime, word boundaries,
+  invalid inputs, rank-deficient matrices, report rejection checks, and the
+  existing benchmark/heuristic/research smoke tests.
+- Standalone C++ tests passed with allocation interception, in release builds,
+  and with AddressSanitizer/UndefinedBehaviorSanitizer. LeakSanitizer was disabled
+  because it cannot operate under this execution environment's ptrace.
+- A portable wheel was built from the source distribution, installed outside
+  the repository, and imported successfully. The extracted source distribution
+  also built and passed its standalone CMake tests.
+- Ruff, whitespace checks, and the trusted verifier's 27-file integrity check
+  passed. No CI/CD configuration was added.
+
+## Reproduce
+
+Build instructions are in the enclosing benchmark README and `native/ris/README.md`
+at the repository root. The fixed-work commands use `compare_native.py` with:
+
+| Run | Methods | Cases | Threads / CPUs | Trials per side | Seeds |
+|---|---|---|---|---:|---|
+| Corpus | cpp, ris, ris-block6 | all 33 | 1 / 0 | 256 | 100 |
+| One worker | cpp, ris-block6 | the five cases above | 1 / 0 | 1024 | 101-103 |
+| Four workers | cpp, ris-block6 | the five cases above | 4 / 0,2,4,6 | 4096 | 101-103 |
+
+Use `report_native.py` to export each run. It rejects incomplete results,
+unvalidated witnesses, or any change in best weight/support for the same work.

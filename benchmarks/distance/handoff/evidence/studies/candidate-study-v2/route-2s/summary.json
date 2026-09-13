@@ -1,0 +1,275 @@
+{
+  "cells": [
+    {
+      "case": "board-700-222-28",
+      "initial": 89,
+      "circulant_portfolio": 75,
+      "routed_portfolio": 28,
+      "circulant_only": null,
+      "routed_only": 28,
+      "circulant_fallback": 75,
+      "routed_fallback": null,
+      "routed_improves_initial": true
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "initial": 89,
+      "circulant_portfolio": 77,
+      "routed_portfolio": 28,
+      "circulant_only": null,
+      "routed_only": 28,
+      "circulant_fallback": 77,
+      "routed_fallback": null,
+      "routed_improves_initial": true
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "initial": 89,
+      "circulant_portfolio": 77,
+      "routed_portfolio": 77,
+      "circulant_only": null,
+      "routed_only": null,
+      "circulant_fallback": 77,
+      "routed_fallback": 77,
+      "routed_improves_initial": false
+    },
+    {
+      "case": "board-682-172-79",
+      "initial": 96,
+      "circulant_portfolio": 84,
+      "routed_portfolio": 84,
+      "circulant_only": 84,
+      "routed_only": 84,
+      "circulant_fallback": null,
+      "routed_fallback": null,
+      "routed_improves_initial": true
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "initial": 98,
+      "circulant_portfolio": 84,
+      "routed_portfolio": 85,
+      "circulant_only": null,
+      "routed_only": 85,
+      "circulant_fallback": 84,
+      "routed_fallback": null,
+      "routed_improves_initial": true
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "initial": 98,
+      "circulant_portfolio": 84,
+      "routed_portfolio": 84,
+      "circulant_only": null,
+      "routed_only": null,
+      "circulant_fallback": 84,
+      "routed_fallback": 84,
+      "routed_improves_initial": false
+    },
+    {
+      "case": "regression-690-182",
+      "initial": 93,
+      "circulant_portfolio": 48,
+      "routed_portfolio": 48,
+      "circulant_only": 48,
+      "routed_only": 48,
+      "circulant_fallback": null,
+      "routed_fallback": null,
+      "routed_improves_initial": true
+    },
+    {
+      "case": "regression-690-182-columns",
+      "initial": 97,
+      "circulant_portfolio": 84,
+      "routed_portfolio": 48,
+      "circulant_only": null,
+      "routed_only": 48,
+      "circulant_fallback": 84,
+      "routed_fallback": null,
+      "routed_improves_initial": true
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "initial": 97,
+      "circulant_portfolio": 84,
+      "routed_portfolio": 84,
+      "circulant_only": null,
+      "routed_only": null,
+      "circulant_fallback": 84,
+      "routed_fallback": 84,
+      "routed_improves_initial": false
+    }
+  ],
+  "timing": [
+    {
+      "case": "board-700-222-28",
+      "method": "circulant",
+      "cpu_seconds": 2.000127248,
+      "elapsed_seconds": 2.0043927010847256,
+      "candidate_setup_seconds": 0.0004420401528477669,
+      "fallback_seconds": 1.9299771210644394,
+      "late_events": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "routed",
+      "cpu_seconds": 1.9997189640000004,
+      "elapsed_seconds": 2.005223970976658,
+      "candidate_setup_seconds": 0.09364285413175821,
+      "fallback_seconds": 0,
+      "late_events": 2
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "method": "routed",
+      "cpu_seconds": 2.000074528,
+      "elapsed_seconds": 2.0058438439154997,
+      "candidate_setup_seconds": 0.09393595904111862,
+      "fallback_seconds": 0,
+      "late_events": 2
+    },
+    {
+      "case": "board-700-222-28-columns",
+      "method": "circulant",
+      "cpu_seconds": 2.0002994370000007,
+      "elapsed_seconds": 2.0178528199903667,
+      "candidate_setup_seconds": 0.00046120909973978996,
+      "fallback_seconds": 1.934801762108691,
+      "late_events": 0
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "method": "routed",
+      "cpu_seconds": 1.9932192369999981,
+      "elapsed_seconds": 2.0045306329848245,
+      "candidate_setup_seconds": 0.08584356505889446,
+      "fallback_seconds": 1.833564726053737,
+      "late_events": 0
+    },
+    {
+      "case": "board-700-222-28-columns-rows",
+      "method": "circulant",
+      "cpu_seconds": 1.999982996,
+      "elapsed_seconds": 2.004957369877957,
+      "candidate_setup_seconds": 0.0004794979467988014,
+      "fallback_seconds": 1.9240447549382225,
+      "late_events": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "circulant",
+      "cpu_seconds": 2.004770445,
+      "elapsed_seconds": 2.012792726047337,
+      "candidate_setup_seconds": 0.035746233887039125,
+      "fallback_seconds": 0,
+      "late_events": 2
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "routed",
+      "cpu_seconds": 2.002582930999999,
+      "elapsed_seconds": 2.0105659420369193,
+      "candidate_setup_seconds": 0.0818131830310449,
+      "fallback_seconds": 0,
+      "late_events": 2
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "method": "routed",
+      "cpu_seconds": 2.011267223000001,
+      "elapsed_seconds": 2.0255146909039468,
+      "candidate_setup_seconds": 0.08966837893240154,
+      "fallback_seconds": 0,
+      "late_events": 2
+    },
+    {
+      "case": "board-682-172-79-columns",
+      "method": "circulant",
+      "cpu_seconds": 1.9949749089999997,
+      "elapsed_seconds": 2.0522021270589903,
+      "candidate_setup_seconds": 0.0007290549110621214,
+      "fallback_seconds": 1.9502124370774254,
+      "late_events": 0
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "method": "circulant",
+      "cpu_seconds": 1.9980615700000008,
+      "elapsed_seconds": 2.0370189410168678,
+      "candidate_setup_seconds": 0.0006466510239988565,
+      "fallback_seconds": 1.9506132279057056,
+      "late_events": 0
+    },
+    {
+      "case": "board-682-172-79-columns-rows",
+      "method": "routed",
+      "cpu_seconds": 1.9977964889999988,
+      "elapsed_seconds": 2.0445623460691422,
+      "candidate_setup_seconds": 0.07787685410585254,
+      "fallback_seconds": 1.8721239869482815,
+      "late_events": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "circulant",
+      "cpu_seconds": 1.9987783159999992,
+      "elapsed_seconds": 2.0364405711879954,
+      "candidate_setup_seconds": 0.039727823925204575,
+      "fallback_seconds": 0,
+      "late_events": 2
+    },
+    {
+      "case": "regression-690-182",
+      "method": "routed",
+      "cpu_seconds": 2.0098101789999987,
+      "elapsed_seconds": 2.0557102039456367,
+      "candidate_setup_seconds": 0.08312715904321522,
+      "fallback_seconds": 0,
+      "late_events": 2
+    },
+    {
+      "case": "regression-690-182-columns",
+      "method": "circulant",
+      "cpu_seconds": 1.9989751579999933,
+      "elapsed_seconds": 2.0510375109734014,
+      "candidate_setup_seconds": 0.0007888469845056534,
+      "fallback_seconds": 1.948352901963517,
+      "late_events": 0
+    },
+    {
+      "case": "regression-690-182-columns",
+      "method": "routed",
+      "cpu_seconds": 2.0055100250000066,
+      "elapsed_seconds": 2.0616457969881594,
+      "candidate_setup_seconds": 0.09125495993066579,
+      "fallback_seconds": 0,
+      "late_events": 2
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "method": "circulant",
+      "cpu_seconds": 1.9979427289999947,
+      "elapsed_seconds": 2.046166622894816,
+      "candidate_setup_seconds": 0.0006791010964661837,
+      "fallback_seconds": 1.9419976799981669,
+      "late_events": 0
+    },
+    {
+      "case": "regression-690-182-columns-rows",
+      "method": "routed",
+      "cpu_seconds": 1.9925070520000077,
+      "elapsed_seconds": 2.0354565569432452,
+      "candidate_setup_seconds": 0.07539453206118196,
+      "fallback_seconds": 1.8718922638799995,
+      "late_events": 0
+    }
+  ],
+  "limits": [
+    "One seed and a 2-second budget support a bounded mechanism diagnostic only.",
+    "Recovery uses check-row ordering; two equal permutation cycles are proposals, not automorphism proofs.",
+    "Parent event timestamps determine deadline credit, including the final native batch return.",
+    "All returned supports were mapped to original coordinates and trusted-validated by the runner.",
+    "Audit checks preservation and counter identity; it does not reconstruct hidden native batch intermediates.",
+    "No full candidate gate or independently replayed exact-distance certificate is claimed."
+  ]
+}

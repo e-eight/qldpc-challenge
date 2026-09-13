@@ -1,0 +1,396 @@
+{
+  "cells": [
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "seconds": 0.1,
+      "weights": [
+        84,
+        82
+      ],
+      "median": 83.0,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "weights": [
+        84,
+        84
+      ],
+      "median": 84.0,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "seconds": 0.1,
+      "weights": [
+        88,
+        92
+      ],
+      "median": 90.0,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "weights": [
+        88,
+        92
+      ],
+      "median": 90.0,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "seconds": 0.1,
+      "weights": [
+        88,
+        85
+      ],
+      "median": 86.5,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "weights": [
+        88,
+        91
+      ],
+      "median": 89.5,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "seconds": 2,
+      "weights": [
+        78,
+        74
+      ],
+      "median": 76.0,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided-refine",
+      "seconds": 2,
+      "weights": [
+        78,
+        74
+      ],
+      "median": 76.0,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "seconds": 2,
+      "weights": [
+        85,
+        83
+      ],
+      "median": 84.0,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided-refine",
+      "seconds": 2,
+      "weights": [
+        85,
+        83
+      ],
+      "median": 84.0,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "seconds": 2,
+      "weights": [
+        84,
+        85
+      ],
+      "median": 84.5,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided-refine",
+      "seconds": 2,
+      "weights": [
+        84,
+        85
+      ],
+      "median": 84.5,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "seconds": 10,
+      "weights": [
+        75,
+        74
+      ],
+      "median": 74.5,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided-refine",
+      "seconds": 10,
+      "weights": [
+        75,
+        74
+      ],
+      "median": 74.5,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "seconds": 10,
+      "weights": [
+        85,
+        82
+      ],
+      "median": 83.5,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided-refine",
+      "seconds": 10,
+      "weights": [
+        85,
+        82
+      ],
+      "median": 83.5,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "seconds": 10,
+      "weights": [
+        80,
+        83
+      ],
+      "median": 81.5,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided-refine",
+      "seconds": 10,
+      "weights": [
+        80,
+        83
+      ],
+      "median": 81.5,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "seconds": 30,
+      "weights": [
+        75,
+        70
+      ],
+      "median": 72.5,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided-refine",
+      "seconds": 30,
+      "weights": [
+        75,
+        70
+      ],
+      "median": 72.5,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "seconds": 30,
+      "weights": [
+        83,
+        79
+      ],
+      "median": 81.0,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided-refine",
+      "seconds": 30,
+      "weights": [
+        83,
+        79
+      ],
+      "median": 81.0,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "seconds": 30,
+      "weights": [
+        80,
+        81
+      ],
+      "median": 80.5,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided-refine",
+      "seconds": 30,
+      "weights": [
+        80,
+        81
+      ],
+      "median": 80.5,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided",
+      "seconds": 60,
+      "weights": [
+        71,
+        70
+      ],
+      "median": 70.5,
+      "hits": 0
+    },
+    {
+      "case": "board-700-222-28",
+      "method": "guided-refine",
+      "seconds": 60,
+      "weights": [
+        71,
+        70
+      ],
+      "median": 70.5,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided",
+      "seconds": 60,
+      "weights": [
+        80,
+        79
+      ],
+      "median": 79.5,
+      "hits": 0
+    },
+    {
+      "case": "board-682-172-79",
+      "method": "guided-refine",
+      "seconds": 60,
+      "weights": [
+        80,
+        79
+      ],
+      "median": 79.5,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided",
+      "seconds": 60,
+      "weights": [
+        80,
+        81
+      ],
+      "median": 80.5,
+      "hits": 0
+    },
+    {
+      "case": "regression-690-182",
+      "method": "guided-refine",
+      "seconds": 60,
+      "weights": [
+        80,
+        81
+      ],
+      "median": 80.5,
+      "hits": 0
+    }
+  ],
+  "paired": [
+    {
+      "method": "guided-refine",
+      "seconds": 0.1,
+      "lower": 0,
+      "equal": 4,
+      "higher": 2
+    },
+    {
+      "method": "guided-refine",
+      "seconds": 2,
+      "lower": 0,
+      "equal": 6,
+      "higher": 0
+    },
+    {
+      "method": "guided-refine",
+      "seconds": 10,
+      "lower": 0,
+      "equal": 6,
+      "higher": 0
+    },
+    {
+      "method": "guided-refine",
+      "seconds": 30,
+      "lower": 0,
+      "equal": 6,
+      "higher": 0
+    },
+    {
+      "method": "guided-refine",
+      "seconds": 60,
+      "lower": 0,
+      "equal": 6,
+      "higher": 0
+    }
+  ],
+  "refinement": [
+    {
+      "case": "board-700-222-28",
+      "descent_calls": 44,
+      "descent_improvements": 0,
+      "global_descent_improvements": 0,
+      "descent_seconds": 0.22237621259409934
+    },
+    {
+      "case": "board-682-172-79",
+      "descent_calls": 40,
+      "descent_improvements": 0,
+      "global_descent_improvements": 0,
+      "descent_seconds": 0.2024868077132851
+    },
+    {
+      "case": "regression-690-182",
+      "descent_calls": 41,
+      "descent_improvements": 0,
+      "global_descent_improvements": 0,
+      "descent_seconds": 0.2073211579117924
+    }
+  ],
+  "saved_candidates": 708,
+  "late_events": 0
+}

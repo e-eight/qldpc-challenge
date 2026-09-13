@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "configurations": 122,
+  "saved_documents": 6724,
+  "portable_witnesses": 24,
+  "permuted_cases_checked": 6,
+  "initial_signatures": 24,
+  "prior_artifacts_unchanged": 660,
+  "all_measured_sources_binaries_and_supplemental_sources_unchanged": true
+}

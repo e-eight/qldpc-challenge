@@ -1,0 +1,109 @@
+# Strategy experiment: decisions and an initialization gap
+
+The most important practical finding is a missing cheap baseline: scanning the
+canonical logical representatives produced during preparation finds **weight 60
+on fresh-bb-960** and **weight 20 on toric-1000**. Both witnesses are independently
+validated and saved. Neither requires random search or a reference witness.
+The bicycle result beats every randomized result in this experiment.
+
+This changes the interpretation of the timed screen. Its comparisons are valid
+for the implemented warm-search interfaces, but apparent gains on these two cases
+do not establish end-to-end improvement over initialization that returns the best
+witness already computed. The next benchmark should include that initialization
+for every method and update the bicycle reference bound from 152 to at most 60.
+
+## What was tested
+
+Three prototypes were implemented independently in parallel, then frozen before
+evaluation. Timed methods ran serially on CPU 0: one worker, two seconds per code
+split equally between X and Z, five new seeds (500–504), seven cases, and six
+methods. This gives **210 configurations**. Methods continued after target recovery.
+Fresh six-pivot RIS, persistent incremental RIS, and the existing circulant pass
+were controls. Reference supports were never passed to search.
+
+See the [full comparison](screen-2s/REPORT.md), the
+[predeclared plan](../../strategy_prototypes/PLAN.md), and
+[prototype descriptions/build instructions](../../strategy_prototypes/README.md).
+
+## Candidates worth pursuing
+
+| Candidate | Decision | Evidence |
+|---|---|---|
+| Guided elite-basis search | Keep as the leading general candidate | Lower median weight than incremental RIS on all seven inputs; 25 lower / 4 equal / 6 higher matched outcomes. Excluding the two initialization-easy cases leaves 17 lower / 2 equal / 6 higher. |
+| RIS plus stabilizer tabu refinement | Keep as a selective refinement stage | Tanner target recovery improved from 2/5 to 4/5. Exact seed replay confirms the local moves improved every Tanner and bicycle run. It wasted substantial time on high-check-weight cases and was weaker on Mitten. |
+| Connected-region column elimination | Deprioritize this prototype | Higher weights than incremental RIS in 26/35 matched outcomes. Its reliable toric recovery adds no advantage over the already-available prepared witness. This does not rule out exact cluster methods or better structural searches. |
+
+The clearest comparisons on cases not solved by the preparation scan are:
+
+| Case | Incremental median | Guided median | Refinement hybrid median | Target recovery: incremental / guided / refinement |
+|---|---:|---:|---:|---:|
+| Tanner 432 | 33 | 30 | 30 | 2/5 / 4/5 / 4/5 |
+| Mitten 975 | 30 | 24 | 36 | 1/5 / 3/5 / 0/5 |
+| Board 700 | 77 | 75 | 77 | 0/5 / 0/5 / 0/5 |
+| Regression 690 | 84 | 83 | 86 | 0/5 / 0/5 / 0/5 |
+
+The existing circulant pass found weight **48 on the regression in every seed**,
+against incremental RIS's median 84. It still missed the weight-28 target, but
+remains the strongest demonstrated family-specific complement on that case.
+The new guided method is an elite-basis experiment, not a faithful QDistEvol port.
+
+## What the additional checks established
+
+The [exact Tanner seed replay](replay-tanner/REPORT.md) reproduced the same RIS
+sessions used by refinement. Their best seed weights were 39, 31, 42, 33, 42;
+the timed hybrid returned 30, 29, 29, 31, 33. The
+[bicycle replay](replay-bb/REPORT.md) gave seed weights 158, 160, 156, 156, 156;
+the hybrid returned 110, 114, 118, 114, 116. Every replayed witness matched an
+existing validated, saved document. These are fixed-work attribution checks,
+not additional equal-time seeding-only controls.
+
+The [prepared-basis diagnostic](prepared-basis/REPORT.md) exposed the stronger
+bicycle and toric witnesses. A further
+[logical-initialization diagnostic](logical-initialization/REPORT.md) enumerated
+all nonzero combinations of chosen representatives when k <= 16, and singles
+and pairs otherwise. It then refined the best representative on each side.
+Combinations helped some high-k cases but did not beat the search winners;
+refining that single chosen representative added no improvement in this one-seed
+check. This reinforces the need for diverse starting representatives/classes.
+Enumeration of representative combinations does not enumerate their stabilizer
+variants and is not an exact-distance algorithm.
+
+## Next experiment
+
+1. Return cheap prepared/combined witnesses before randomized search, and seed
+   every method with the same initial bound. Refresh the frozen reference corpus.
+2. Compare incremental RIS, guidance, and guidance with a small refinement budget
+   on fresh seeds. Include a seeding-only ablation and charge every stage to the
+   same total budget. The combined strategy has not been tested here.
+3. Expand to the existing corpus and relabeled copies, so accidental alignment
+   with canonical elimination is visible. Retain a budgeted circulant pass on
+   applicable cases. Larger inputs remain necessary for cache-scaling claims.
+
+Five seeds are sufficient for screening candidates, not for establishing reliable
+miss probabilities. The hard weight-28 cases remain unresolved by the general
+strategies. All reported weights are witnessed upper bounds, not exact distances
+or full-gate-approved code submissions.
+
+## Validation and artifacts
+
+Thirty new/prototype Python tests passed. Guided C++ row-space/pivot invariants
+also passed ASAN/UBSAN checks. The trusted verifier's 27-file integrity check,
+Ruff on the new orchestration scripts, and whitespace checks passed.
+
+The main screen retained **139,985 emitted observations**, including 395 late
+observations without deadline credit, and saved **138,718 distinct-per-side/run
+supports** through the research kit. The two initialization diagnostics saved
+another 140 documents. Replays reuse the original validated documents.
+The original event logs, matrices, executable hashes, source archives, and
+[artifact audit](screen-2s/audit.json) accompany the results.
+
+Validation and repeated full-matrix submission packaging dominated total runtime,
+especially for refinement's many seed-session histories. This is benchmark
+evidence overhead, not an intrinsic cost of the local-move algorithm. A standalone
+tool should retain witnesses efficiently with matrix data stored once, while
+keeping the trusted submission path for repository validation.
+
+Workspace allocation and delivery batching differ between interfaces and are
+documented in the full report. These measurements do not establish a production
+end-to-end speedup, scaling beyond 1,000 qubits, or superiority over unmeasured
+algorithms. The original core and production verifier were not modified.

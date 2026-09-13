@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "configurations": 168,
+  "saved_witness_documents": 7142,
+  "identical_initializations_across_methods_seeds_budgets": 14,
+  "identical_source_and_binary_hashes_across_budgets": true,
+  "late_events": 0,
+  "paired_against_guided": {
+    "incremental": {
+      "lower": 7,
+      "equal": 24,
+      "higher": 11
+    },
+    "m4ri": {
+      "lower": 0,
+      "equal": 17,
+      "higher": 25
+    },
+    "qdistevol": {
+      "lower": 0,
+      "equal": 13,
+      "higher": 29
+    }
+  }
+}

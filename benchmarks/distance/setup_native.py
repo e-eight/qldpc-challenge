@@ -1,5 +1,6 @@
 """Build instrumentation without editing the verifier's native source."""
 
+import os
 from pathlib import Path
 
 from pybind11.setup_helpers import Pybind11Extension, build_ext
@@ -14,7 +15,7 @@ setup(
             "benchmark_native",
             [str(Path(__file__).with_name("native.cpp"))],
             cxx_std=17,
-            extra_compile_args=["-O3"],
+            extra_compile_args=["-O3", *(["-march=native"] if os.getenv("RIS_NATIVE") == "1" else [])],
         )
     ],
     cmdclass={"build_ext": build_ext},

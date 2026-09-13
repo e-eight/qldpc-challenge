@@ -1,0 +1,172 @@
+{
+  "cells": [
+    {
+      "seconds": 2,
+      "case": "682-182-76",
+      "method": "guided",
+      "weights": [
+        80,
+        81,
+        83
+      ],
+      "median": 81
+    },
+    {
+      "seconds": 2,
+      "case": "682-182-76",
+      "method": "crt-groups",
+      "weights": [
+        99,
+        99,
+        99
+      ],
+      "median": 99
+    },
+    {
+      "seconds": 2,
+      "case": "682-182-76",
+      "method": "binary-groups",
+      "weights": [
+        94,
+        97,
+        95
+      ],
+      "median": 95
+    },
+    {
+      "seconds": 2,
+      "case": "664-170-18",
+      "method": "guided",
+      "weights": [
+        18,
+        18,
+        18
+      ],
+      "median": 18
+    },
+    {
+      "seconds": 2,
+      "case": "664-170-18",
+      "method": "crt-groups",
+      "weights": [
+        82,
+        88,
+        86
+      ],
+      "median": 86
+    },
+    {
+      "seconds": 2,
+      "case": "664-170-18",
+      "method": "binary-groups",
+      "weights": [
+        84,
+        84,
+        82
+      ],
+      "median": 84
+    },
+    {
+      "seconds": 10,
+      "case": "682-182-76",
+      "method": "guided",
+      "weights": [
+        80,
+        81,
+        80
+      ],
+      "median": 80
+    },
+    {
+      "seconds": 10,
+      "case": "682-182-76",
+      "method": "crt-groups",
+      "weights": [
+        99,
+        99,
+        99
+      ],
+      "median": 99
+    },
+    {
+      "seconds": 10,
+      "case": "682-182-76",
+      "method": "binary-groups",
+      "weights": [
+        94,
+        95,
+        95
+      ],
+      "median": 95
+    },
+    {
+      "seconds": 10,
+      "case": "664-170-18",
+      "method": "guided",
+      "weights": [
+        18,
+        18,
+        18
+      ],
+      "median": 18
+    },
+    {
+      "seconds": 10,
+      "case": "664-170-18",
+      "method": "crt-groups",
+      "weights": [
+        82,
+        82,
+        86
+      ],
+      "median": 82
+    },
+    {
+      "seconds": 10,
+      "case": "664-170-18",
+      "method": "binary-groups",
+      "weights": [
+        80,
+        80,
+        80
+      ],
+      "median": 80
+    }
+  ],
+  "configurations": 36,
+  "allocated_seconds": 216.0,
+  "saved_documents": 1464,
+  "checked_events": 1614,
+  "initialization": [
+    {
+      "case": "664-170-18",
+      "side": "X",
+      "workers_compared": 18,
+      "best": 92,
+      "signature_sha256": "ba1f93f299f49ba5cf971035984dddb87c37a241c6f2df7b2dc18ad4a555523f"
+    },
+    {
+      "case": "664-170-18",
+      "side": "Z",
+      "workers_compared": 18,
+      "best": 100,
+      "signature_sha256": "bc442e63b084b28dbbf26cf6bd1b34caad9fe7139215d5645cbfa0ab7048cb9e"
+    },
+    {
+      "case": "682-182-76",
+      "side": "X",
+      "workers_compared": 18,
+      "best": 99,
+      "signature_sha256": "d2d351e91791e8baf44b30f47ea81ac5b4a310d5a262fa7af9f4f5140fb76a8c"
+    },
+    {
+      "case": "682-182-76",
+      "side": "Z",
+      "workers_compared": 18,
+      "best": 99,
+      "signature_sha256": "50dbc7183ae26c86f878b11f98fa5fc0f933bbd9609ab44f2f22f0784b4016df"
+    }
+  ],
+  "median_setup_seconds": 0.1502766340272501,
+  "median_scores_per_second": 159195834.13086757
+}

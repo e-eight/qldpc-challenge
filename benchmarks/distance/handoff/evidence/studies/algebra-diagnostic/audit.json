@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "mask_equations_checked": 1213788,
+  "component_spaces_checked": 1466,
+  "selected_cut_ranks_checked": 903,
+  "symmetry_proposals_checked": 67,
+  "accepted_symmetries": 2,
+  "prior_artifacts_unchanged": 1174,
+  "no_distance_search": true,
+  "supplementary_source_hashes": {
+    "benchmarks/distance/results/algebra-diagnostic/qc_module.py": "9cb62279f77bd17bd5a4da94559786ddf66c2edd60481e5ba6e9923dd68b7b73",
+    "benchmarks/distance/results/algebra-diagnostic/test_qc.py": "4c18a27d4d3348594d5759d200040cc37d0a69a5def9cd90a23d50fa98655866",
+    "benchmarks/distance/results/algebra-diagnostic/audit.py": "ca4450bdb2a3305f6beeb43f1ffa738916703a65a105838f9ffbe43de2a1a517"
+  },
+  "completed_diagnostic": {
+    "cases": 6,
+    "seconds": 9.399540378013626,
+    "decomposition_proposals": 60,
+    "cut_domains": 68,
+    "symmetry_proposals": 67,
+    "invariance_checks": 60,
+    "prior_artifacts_unchanged": 1174,
+    "search_performed": false
+  }
+}

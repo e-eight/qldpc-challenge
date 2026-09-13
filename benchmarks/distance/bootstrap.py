@@ -40,16 +40,19 @@ def main(directory):
         with tarfile.open(archive) as stream:
             stream.extractall(directory, filter="data")
     prefix = directory / "m4ri-install"
-    environment = dict(os.environ, CFLAGS="-O3", ac_cv_sys_max_cmd_len="196608")
+    optimization = "-O3 -march=native" if os.getenv("RIS_NATIVE") == "1" else "-O3"
+    environment = dict(os.environ, CFLAGS=optimization, ac_cv_sys_max_cmd_len="196608")
     run(["./configure", f"--prefix={prefix}", "--disable-openmp", "--disable-shared"], cwd=library, env=environment)
     run(["make", "clean"], cwd=library)
     run(["make", "-j4"], cwd=library)
     run(["make", "install"], cwd=library)
     compiler = os.environ.get("CC", "cc")
-    # Both benchmark and dist-m4ri use O3 without architecture-specific ISA
-    # overrides. M4RI itself is built without nested OpenMP parallelism.
+    # Match the benchmark's optional host tuning; never enable nested OpenMP.
     run(["make", "clean"], cwd=native / "src")
-    run(["make", "-j4", "dist_m4ri", f"CC={compiler} -I{prefix}/include -L{prefix}/lib", "OPT=-O3"], cwd=native / "src")
+    run(
+        ["make", "-j4", "dist_m4ri", f"CC={compiler} -I{prefix}/include -L{prefix}/lib", f"OPT={optimization}"],
+        cwd=native / "src",
+    )
     run(
         [
             sys.executable,
@@ -69,7 +72,7 @@ def main(directory):
             "m4ri_archive_sha256": sha256(archive),
             "m4ri_binary_sha256": sha256(native / "src" / "dist_m4ri"),
             "m4ri_openmp": False,
-            "optimization": "-O3",
+            "optimization": optimization,
             "compiler": compiler,
             "compiler_version": subprocess.check_output([compiler, "--version"], text=True),
         },
