@@ -4888,7 +4888,7 @@
   "construction": "Open-boundary weight-8 tile code (planar bivariate-bicycle, arXiv:2504.09171 family) on a 17x17 bulk with supports f={(0,0),(0,3),(2,2),(3,0)}, g={(0,1),(1,1),(2,0),(3,3)}; 12 qubits removed from codes/578-18-20.json by a distance-aware row-space merge-graft (research/reduce_tile.py), k=18 and the witnessed d=20 preserved.",
   "origin": "submission",
   "date": "2026-09-14",
-  "model": "deepseek-flash (2026-09 deployment)",
+  "model": "DeepSeek-V4.1-Flash",
   "references": [
    "arXiv:2504.09171",
    "arXiv:2504.08887"
