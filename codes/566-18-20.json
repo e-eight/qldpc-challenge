@@ -4885,7 +4885,7 @@
   "authors": [
    "@e-eight"
   ],
-  "construction": "Open-boundary weight-8 tile code (planar bivariate-bicycle, arXiv:2504.09171 family) on a 17x17 bulk with supports f={(0,0),(0,3),(2,2),(3,0)}, g={(0,1),(1,1),(2,0),(3,3)}; 12 qubits removed from codes/578-18-20.json by a distance-aware row-space merge-graft (research/reduce_tile.py), k=18 and the witnessed d=20 preserved.",
+  "construction": "Open-boundary weight-8 tile code (planar bivariate-bicycle, arXiv:2504.09171 family) on a 17x17 bulk with supports f={(0,0),(0,3),(2,2),(3,0)}, g={(0,1),(1,1),(2,0),(3,3)}; 12 qubits removed from codes/578-18-20.json by ten distance-aware row-space merge-grafts, k=18 and the witnessed d=20 preserved.",
   "origin": "submission",
   "date": "2026-09-14",
   "model": "DeepSeek-V4.1-Flash",
@@ -4893,7 +4893,7 @@
    "arXiv:2504.09171",
    "arXiv:2504.08887"
   ],
-  "notes": "Relation to existing entries: NOT equivalent to any board entry. This code is a qubit-reduced descendant of codes/578-18-20.json ([[578,18,20]], @npdeep): the generating set is that code's row space acted on by ten distance-screened row-space merge-grafts (research/reduce_tile.py), which delete qubits and rows at unchanged k, so n differs (566 vs 578) and the verified fingerprint differs. The trusted gate reports no exact and no WL-equivalent board duplicate. It strictly dominates [[578,18,20]] on n at equal (k, d, w) in weight-8 x local-2d-bilayer, and its kd^2/n = 12.721 passes the published weight-8 tile-code bar of ~12.7 ([[512,18,19]], arXiv:2504.09171). Distance is a witness-backed upper bound (d_X <= 20, d_Z <= 21); no exact claim is made. Same supports/layout as the source (17x17 bulk, max check weight 8, interaction radius 6.0828)."
+  "notes": "Relation to existing entries: NOT equivalent to any board entry. This code is a qubit-reduced descendant of codes/578-18-20.json ([[578,18,20]], @npdeep): the generating set is that code's row space acted on by ten distance-screened row-space merge-grafts, which delete qubits and rows at unchanged k, so n differs (566 vs 578) and the verified fingerprint differs. The trusted gate reports no exact and no WL-equivalent board duplicate. It strictly dominates [[578,18,20]] on n at equal (k, d, w) in weight-8 x local-2d-bilayer, and its kd^2/n = 12.721 passes the published weight-8 tile-code bar of ~12.7 ([[512,18,19]], arXiv:2504.09171). Distance is a witness-backed upper bound (d_X <= 20, d_Z <= 21); no exact claim is made. Same supports/layout as the source (17x17 bulk, max check weight 8, interaction radius 6.0828)."
  },
  "family": "tile",
  "locality": {
