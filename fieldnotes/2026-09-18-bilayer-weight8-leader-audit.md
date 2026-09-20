@@ -285,6 +285,17 @@ rather than more of the same. `[[684,10-101]]` remains the expensive one: 106
 against 101 at every budget tried, and its own record already carries a 20M-trial
 ladder, so only 20M-plus at the corrected depth can decide it.
 
+### The corrections this campaign already landed are not themselves soft
+
+The two entries the earlier sessions corrected were corrected with the same
+shallow instrument, so they were re-measured too: at 2,000,000 trials, seed 51,
+depth 64, `[[684,14,72]]` reads 80 against its 72 and `[[684,20,48]]` reads 82
+against its 48. Both are *inconclusive*, not refuted -- the search does not reach
+either claim, so neither is corroborated either -- and the honest reading is that
+they need the same deep treatment before they can be called settled. What can be
+said is that the pattern is not "every correction is still soft": these two did
+not fall to a 2M rung the way `[[684,8,85]]` and `[[684,12,77]]` did.
+
 ### The gate that is meant to catch this is shallower still
 
 The CI refutation gate drives the same accelerator at `pair_depth=8`, and the
