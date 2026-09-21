@@ -1,6 +1,6 @@
 {
- "schema_version": "0.1",
- "name": "[[562,18,20]]",
+ "schema_version": "0.2",
+ "name": "[[562,18,19]]",
  "code_type": "CSS",
  "n": 562,
  "k": 18,
@@ -4788,7 +4788,7 @@
   ]
  },
  "distance": {
-  "d": 20,
+  "d": 19,
   "X": {
    "value": 20,
    "confidence": "upper_bound",
@@ -4816,30 +4816,43 @@
    ]
   },
   "Z": {
-   "value": 20,
+   "value": 19,
    "confidence": "upper_bound",
    "witness": [
-    28,
-    47,
-    95,
-    98,
-    113,
-    128,
-    149,
-    161,
-    179,
-    194,
-    197,
-    200,
-    215,
+    23,
+    71,
+    74,
+    89,
+    104,
+    125,
+    137,
+    155,
+    170,
+    173,
+    176,
+    191,
+    203,
     227,
-    251,
-    263,
-    308,
-    310,
-    324,
-    341
-   ]
+    239,
+    272,
+    285,
+    300,
+    317
+   ],
+   "witness_provenance": {
+    "found_by": [
+     "@vprusso",
+     "@e-eight"
+    ],
+    "date": "2026-09-20",
+    "found_at_samples": 2000000,
+    "tool": "verify/gf2_fast distance_rand_witness, pair_depth 64",
+    "seeds": [
+     401,
+     402,
+     403
+    ]
+   }
   }
  },
  "provenance": {
@@ -4850,7 +4863,7 @@
   "origin": "submission",
   "date": "2026-09-17",
   "model": "DeepSeek V4 Flash 0731",
-  "notes": "Checked against the board: no exact-duplicate or WL-equivalent entry (trusted gate)."
+  "notes": "Checked against the board: no exact-duplicate or WL-equivalent entry (trusted gate). REVISED 2026-09-20: distance corrected from d=20 to d=19. The entry admitted a weight-19 Z-type logical. It is a degree-one r=1 graft of [[563,18,20]], and removing a qubit cannot raise the distance and is not known to preserve it, so the claim had inherited the parent tile value rather than measuring its own; the entry's own bound came from a 20,000-trial search. The over-claim was first reported by @vprusso in the board-wide 2M-trial RIS re-audit of issue #1607; this session reproduced it independently on three fresh-seed rungs at pair depth 64 (2,000,000 / 8,000,000 / 20,000,000 trials, seeds 401/402/403, 30,000,000 trials in total), each returning exactly 19 and none reaching lower; the stored witness is a different weight-19 Z-logical, shifted by two qubits from the one in the issue. The stored witness was re-validated without the search stack: syndrome weight 0 against all 270 H_X rows, and rank(H_Z) 274 -> 275 with it appended, so it lies in ker H_X and outside the stabilizer row space of H_Z. Distance remains a witness-backed upper bound, not an exact claim."
  },
  "family": "tile",
  "locality": {
